@@ -58,9 +58,9 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website showcasing projects and skills. Fully responsive and optimized for performance.",
-    techStack: ["Next.js", "Tailwind CSS"],
+    techStack: ["React.js", "Tailwind CSS","Gsap"],
     imgSrc: project3,
-    link: "https://myportfolio.com",
+    link: "https://danish-port.vercel.app/",
   },
   {
     id: 4,
