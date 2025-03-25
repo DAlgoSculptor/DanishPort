@@ -37,12 +37,12 @@ export const PROFILE = {
 export const PROJECTS = [
   {
     id: 1,
-    title: "E-commerce Website",
+    title: "Chatty – Real-Time Chat Application",
     description:
-      "A full-featured e-commerce website built with React and Node.js. It includes user authentication, product management, and an integrated payment gateway.",
-    techStack: ["React", "Node.js", "Express", "MongoDB"],
+      "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
+    techStack: ["React", "Node.js", "Express", "MongoDB" , "Daisy Ui" ,"TailwindCSS" , "Shadcn"],
     imgSrc: project1,
-    link: "https://example-ecommerce.com",
+    link: "https://chatty-kappa-ten.vercel.app/login",
   },
   {
     id: 2,
