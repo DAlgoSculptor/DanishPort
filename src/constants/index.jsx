@@ -124,62 +124,8 @@ export const SKILLS = [
     name: "GraphQL",
     icon: <RiGitBranchLine className="text-pink-400" />,
   },
-  {
-    name: "TypeScript",
-    icon: <RiFileCodeLine className="text-blue-600" />,
-  },
-  {
-    name: "Next.js",
-    icon: <RiNextjsLine className="text-black" />,
-  },
-  {
-    name: "Redux",
-    icon: <RiExchangeDollarLine className="text-purple-500" />,
-  },
-  {
-    name: "Express.js",
-    icon: <RiServerLine className="text-gray-700" />,
-  },
-  {
-    name: "Firebase",
-    icon: <RiFireLine className="text-yellow-400" />,
-  },
-  {
-    name: "Docker",
-    icon: <RiShipLine className="text-blue-500" />,
-  },
-  {
-    name: "Kubernetes",
-    icon: <RiCloudLine className="text-blue-600" />,
-  },
-  {
-    name: "Python",
-    icon: <RiPythonLine className="text-blue-400" />,
-  },
-  {
-    name: "Django",
-    icon: <RiServerFill className="text-green-700" />,
-  },
-  {
-    name: "PostgreSQL",
-    icon: <RiDatabase2Line className="text-blue-500" />,
-  },
-  {
-    name: "Git",
-    icon: <RiGitMergeLine className="text-red-500" />,
-  },
-  {
-    name: "Supabase",
-    icon: <RiCloudFill className="text-green-500" />,
-  },
-  {
-    name: "AWS",
-    icon: <RiCloudFill className="text-orange-500" />,
-  },
-  {
-    name: "Linux",
-    icon: <RiTerminalBoxLine className="text-gray-500" />,
-  },
+
+
 
 
 ];
