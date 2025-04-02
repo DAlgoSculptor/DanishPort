@@ -43,7 +43,7 @@ const Contact = () => {
             <p className="contact-text mb-4 text-lg lg:text-xl">
                 Feel free to reach out to me via email:{" "}
                 <a href="mailto:danish@gmail.com" className="border-b">
-                    danish@gmail.com
+                    danishnawaz345678@gmail.com
                 </a>
             </p>
             <div className="mt-8 flex justify-center space-x-6">
