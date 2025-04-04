@@ -12,11 +12,14 @@ import {
   RiJavascriptLine,
   RiReactjsLine,
   RiNodeTree,
+  RiServerLine,
+
 } from "@remixicon/react";
 import {
   RiDatabaseLine,
   RiCodeSSlashLine,
   RiGitBranchLine,
+  
 } from "@remixicon/react";
 
 export const NAVIGATION_LINKS = [
@@ -103,7 +106,11 @@ export const SKILLS = [
   {
     name: "JavaScript",
     icon: <RiJavascriptLine className="text-yellow-500" />,
+
   },
+  { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
+  { name: "Django", icon: <RiServerLine className="text-green-700" /> },
+
   {
     name: "React",
     icon: <RiReactjsLine className="text-blue-400" />,
@@ -123,6 +130,13 @@ export const SKILLS = [
   {
     name: "GraphQL",
     icon: <RiGitBranchLine className="text-pink-400" />,
+  },
+  {
+    name:"Git",
+    icon:<RiGitBranchLine className="text-orange-400" />
+  },
+  { name: "Bootstrap", icon: <RiCodeSSlashLine className="text-purple-600" /> 
+
   },
 
 
@@ -178,6 +192,7 @@ export const EDUCATION = [
       id: 1,
       degree: "Bachelor of Technology in Computer Science and Engineering",
       institution: "MM(DU), Mullana, Ambala, Haryana",
+      link: "https://www.mmumullana.org/",
       duration: "2022 - Present",
       description:
         "Pursuing a B.Tech in Computer Science and Engineering with a focus on system design, AI technologies, and software development. Working on projects related to data recovery, real-time collaborative visualization, and chatbot development.",
