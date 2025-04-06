@@ -15,7 +15,7 @@ const Experience = () => {
                 duration:1,
                 ease:"power3.out",
                 stagger:0.3,
-                ScrollTrigger:{
+                scrollTrigger:{
                     trigger: experienceRef.current,
                     start:"top 80%",
                     toggleActions:"play none none",

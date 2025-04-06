@@ -228,7 +228,7 @@ export const EDUCATION = [
 ];
 
 export const TESTIMONIAL = {
-  name: " Doe",
+  name: "Hania Qureshi",
   title: "CEO, TechCorp",
   quote:
     "Working with Danish was a game-changer. His expertise in full-stack development helped us scale our product with ease. His attention to detail and passion for quality are unmatched.",
