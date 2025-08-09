@@ -4,6 +4,7 @@ import project3 from "../assets/project3.webp";
 import Meme from "../assets/Meme.webp";
 import project0 from '../assets/project0.webp';
 import project5 from "../assets/project5.webp";
+// import bg2 from "../assets/bg2.webp";
 import Chatty from "../assets/Chatty.webp";
 import project6 from "../assets/project6.webp";
 import personImage from "../assets/testimonial.webp";
