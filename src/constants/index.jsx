@@ -7,6 +7,7 @@ import project5 from "../assets/project5.webp";
 // import bg2 from "../assets/bg2.webp";
 import Chatty from "../assets/Chatty.webp";
 import project6 from "../assets/project6.webp";
+import project7 from "../assets/project7.webp";
 import personImage from "../assets/testimonial.webp";
 import { SiFlutter, SiDart } from "react-icons/si";
 
@@ -54,6 +55,15 @@ export const PROJECTS = [
   techStack: ["React" , "Node.js" , "Typescript" , "Supabase"],
   imgSrc:project6 ,
   link: "https://code-analyzer-swart.vercel.app/",
+  },
+   {
+  id: 7,
+  title: "LernoVate",
+  description:
+    "LERNOVATE is a modern, responsive learning platform landing page designed to showcase educational services in an engaging and professional manner. It features an elegant UI with smooth navigation, animated components, and a well-structured layout to highlight core offerings, testimonials, and key statistics. The platform emphasizes accessibility, performance optimization, and a mobile-friendly design to ensure a seamless user experience across all devices",
+  techStack: ["Next.js" ,"React", "Typescript" , "TailwindCSS" , "Shadcn" , "Framer Motion" , "Supabase"],
+  imgSrc:project7 ,
+  link: "https://lernovate-nepal.vercel.app/",
   },
 
 
