@@ -37,12 +37,24 @@ export const NAVIGATION_LINKS = [
 
 export const PROFILE = {
   name: "Danish Nawaz",
-  role: "Flutter Developer",
+  role: "Full Stack Web Developer",
   subheading:
     "With 1 years of full-stack development experience, I build efficient, scalable web applications. Not on the job hunt, but always curious about interesting projects.",
 };
 
 export const PROJECTS = [
+
+
+
+   {
+  id: 6,
+  title: "CodeAnalyzer",
+  description:
+    "CodeAnalyzer is an AI-powered code analysis tool that helps developers detect bugs, measure code quality, and visualize complexity in real time. It features interactive dashboards, advanced code metrics, and a clean, responsive interface designed to improve developer productivity and software reliability. Built with a focus on efficiency, scalability, and seamless user experience",
+  techStack: ["React" , "Node.js" , "Typescript" , "Supabase"],
+  imgSrc:project6 ,
+  link: "https://code-analyzer-swart.vercel.app/",
+  },
 
 
    {
@@ -57,12 +69,12 @@ export const PROJECTS = [
 
   {
     id: 3,
-    title: "Portfolio Website",
+    title: "Coding Tracker",
     description:
-      "A personal portfolio website showcasing projects and skills. Fully responsive and optimized for performance.",
-    techStack: ["React.js", "Tailwind CSS","Gsap"],
+      "Coding Tracker is a personal portfolio tool that automatically syncs solved coding problems from platforms like LeetCode and Codeforces. It features real-time API integration, automated data synchronization, and a clean, searchable interface to browse problems, view solution code, and track progress seamlessly",
+    techStack: ["React.js", "Node.js","Typescript" , "Supabase" , "LeetCode GraphQL API" , "Codeforces API"],
     imgSrc: project3,
-    link: "https://danish-port.vercel.app/",
+    link: "https://code-tracker-rose.vercel.app/",
   },
 
   
@@ -95,10 +107,6 @@ export const PROJECTS = [
   link: "https://github.com/DAlgoSculptor/MemeApp",
 },
 
-
-  
-  
-  
 ];
 
 export const SKILLS = [
