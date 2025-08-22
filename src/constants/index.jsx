@@ -74,7 +74,7 @@ export const PROJECTS = [
     "NutriScan is an AI-powered food analysis tool that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Angular, Firebase, and Material UI.",
   techStack: ["Angular", "Firebase", "Material UI"],
   imgSrc:project0 ,
-  link: "https://nutri-scan-ai-phi.vercel.app/",
+  link: "https://nutriscan-food-labels-insights.onrender.com/",
   },
 
   {
