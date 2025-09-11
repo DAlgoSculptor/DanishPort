@@ -144,6 +144,16 @@
   .grid-augment {
     @apply grid gap-6 md:gap-8 lg:gap-12;
   }
+  
+  /* Enhanced Glassmorphism Effect */
+  .glassmorphism {
+    @apply backdrop-blur-xl bg-white/80 dark:bg-slate-900/80 border border-white/20 dark:border-slate-700/50;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  }
+  
+  .dark .glassmorphism {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @layer utilities {
@@ -427,4 +437,17 @@ html {
   overflow: hidden;
 }
 
-  
+/* Enhanced glassmorphism effect */
+.glassmorphism-enhanced {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+}
+
+.dark .glassmorphism-enhanced {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
