@@ -214,7 +214,6 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCES = [
-  
   {
     yearRange: "2023 - 2024",
     role: "Junior Android Developer",
@@ -222,6 +221,14 @@ export const EXPERIENCES = [
     description:
       "Worked on developing Android applications and internal tools. Assisted in debugging and optimizing app performance. Gained hands-on experience with Kotlin, Java, and Android SDK. Developed features for NutriScan and NotesApp applications.",
     techStack: ["Kotlin", "Java", "Android", "Firebase", "REST API"],
+  },
+  {
+    yearRange: "2025",
+    role: "Flutter Developer Intern",
+    company: "Petuk Ji Private Limited",
+    description:
+      "Developed TradeTook, a mobile application using Flutter framework. Integrated Smart API and implemented real-time data synchronization with Firebase. Gained practical experience in cross-platform mobile development and RESTful API integration.",
+    techStack: ["Flutter", "Dart", "Firebase Realtime Database", "Smart API Integration"],
   },
 ];
 
