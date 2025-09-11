@@ -1,5 +1,6 @@
 import { SKILLS } from "../constants"
 import { Link } from "react-router-dom"
+import SkillsVisualization from "../components/ui/SkillsVisualization"
 
 const Skills = () => {
     return (
@@ -12,6 +13,14 @@ const Skills = () => {
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
                         Here are the technologies and tools I'm proficient in. I continuously learn and adapt to new technologies.
                     </p>
+                </div>
+                
+                {/* Interactive Skills Visualization */}
+                <div className="mb-16 max-w-6xl mx-auto">
+                    <h2 className="text-2xl font-bold mb-6 text-center text-slate-900 dark:text-white">
+                        Interactive Skills Map
+                    </h2>
+                    <SkillsVisualization />
                 </div>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">

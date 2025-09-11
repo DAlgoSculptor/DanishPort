@@ -1,5 +1,6 @@
 import { ThemeProvider } from "./contexts/ThemeContext"
 import { Routes, Route } from "react-router-dom"
+import { useEffect } from "react"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
@@ -10,12 +11,32 @@ import Education from "./pages/Education"
 import Contact from "./pages/Contact"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsOfService from "./pages/TermsOfService"
+import ParticleBackground from "./components/ui/ParticleBackground"
+import LoadingScreen from "./components/ui/LoadingScreen"
+import { useState } from "react"
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Smooth scroll behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Handle scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={() => setIsLoading(false)} />;
+  }
+
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300 flex flex-col">
         <Navbar />
+        <ParticleBackground />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />

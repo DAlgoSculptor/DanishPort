@@ -13,6 +13,7 @@ const NAVIGATION_LINKS = [
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState(null);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
@@ -27,7 +28,7 @@ const Navbar = () => {
   return (
     <nav className="fixed left-0 right-0 z-50 lg:top-4">
       {/* Desktop Menu */}
-      <div className="mx-auto hidden max-w-4xl items-center justify-between rounded-2xl border border-white/30 py-3 px-8 backdrop-blur-lg lg:flex bg-white/80 dark:bg-slate-900/90 shadow-lg">
+      <div className="mx-auto hidden max-w-4xl items-center justify-between rounded-2xl border border-white/30 py-3 px-8 backdrop-blur-lg lg:flex bg-white/80 dark:bg-slate-900/90 shadow-lg relative">
         <Link
           to="/"
           className="uppercase text-lg font-bold text-slate-900 dark:text-white whitespace-nowrap mr-6 tracking-wider"
@@ -36,7 +37,12 @@ const Navbar = () => {
         </Link>
         <ul className="flex items-center lg:gap-8">
           {NAVIGATION_LINKS.map(({ label, href }, index) => (
-            <li key={index} className="whitespace-nowrap relative">
+            <li 
+              key={index} 
+              className="whitespace-nowrap relative"
+              onMouseEnter={() => setHoveredLink(href)}
+              onMouseLeave={() => setHoveredLink(null)}
+            >
               <Link
                 className={`text-sm transition-all duration-300 font-medium px-3 py-2 rounded-xl ${
                   isActive(href)
@@ -55,18 +61,28 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Theme Toggle */}
+        {/* Theme Toggle with Animation */}
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-full bg-white/50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-all duration-300 ml-4 shadow-neumorphism"
+          className="p-2 rounded-full bg-white/50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-all duration-300 ml-4 shadow-neumorphism transform hover:scale-110"
           aria-label="Toggle theme"
         >
-          {theme === 'dark' ? (
-            <RiSunLine className="w-5 h-5" />
-          ) : (
-            <RiMoonLine className="w-5 h-5" />
-          )}
+          <div className="relative w-5 h-5">
+            <RiSunLine className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${theme === 'dark' ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
+            <RiMoonLine className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${theme === 'dark' ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'}`} />
+          </div>
         </button>
+        
+        {/* Preview Panel */}
+        {hoveredLink && PREVIEW_COMPONENTS[hoveredLink] && (
+          <div 
+            className="absolute top-full left-0 mt-2 w-80 rounded-2xl border border-white/30 backdrop-blur-lg bg-white/90 dark:bg-slate-900/90 shadow-xl z-50 animate-fade-in"
+            onMouseEnter={() => setHoveredLink(hoveredLink)}
+            onMouseLeave={() => setHoveredLink(null)}
+          >
+            {PREVIEW_COMPONENTS[hoveredLink]}
+          </div>
+        )}
       </div>
 
       {/* Mobile Menu */}
@@ -83,14 +99,13 @@ const Navbar = () => {
             {/* Mobile Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-white/50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-all duration-300 shadow-neumorphism"
+              className="p-2 rounded-full bg-white/50 dark:bg-slate-800/50 text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 hover:bg-white/70 dark:hover:bg-slate-700/50 transition-all duration-300 shadow-neumorphism transform hover:scale-110"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
-                <RiSunLine className="w-5 h-5" />
-              ) : (
-                <RiMoonLine className="w-5 h-5" />
-              )}
+              <div className="relative w-5 h-5">
+                <RiSunLine className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${theme === 'dark' ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
+                <RiMoonLine className={`absolute inset-0 w-5 h-5 transition-all duration-300 ${theme === 'dark' ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 -rotate-90 scale-0'}`} />
+              </div>
             </button>
 
             <button
@@ -137,6 +152,31 @@ const Navbar = () => {
         .dark .shadow-neumorphism {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), 
                       -5px -5px 10px rgba(255, 255, 255, 0.05);
+        }
+        
+        .animate-fade-in {
+          animation: fadeIn 0.2s ease-out forwards;
+          opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        }
+        
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </nav>
