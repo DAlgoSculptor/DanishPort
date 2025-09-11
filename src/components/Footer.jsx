@@ -50,7 +50,7 @@ const Footer = () => {
               <RiTwitterXLine className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:helpbynutriscanai@gmail.com" 
+              href="mailto:danishnawaz345678@gmail.com" 
               className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
               aria-label="Email"
             >

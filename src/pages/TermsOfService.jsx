@@ -117,7 +117,7 @@ const TermsOfService = () => {
               </p>
               <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800/50 mb-6">
                 <p className="text-slate-700 dark:text-slate-300">
-                  <strong>Email:</strong> <a href="mailto:helpbynutriscanai@gmail.com" className="text-green-600 dark:text-green-400 hover:underline">helpbynutriscanai@gmail.com</a>
+                  <strong>Email:</strong> <a href="mailto:danishnawaz345678@gmail.com" className="text-green-600 dark:text-green-400 hover:underline">helpbynutriscanai@gmail.com</a>
                 </p>
               </div>
             </div>
