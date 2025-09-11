@@ -31,7 +31,7 @@ const Home = () => {
         ))}
       </div>
       
-      <div className="mt-8 lg:mt-16 text-center z-10 max-w-4xl">
+      <div className="mt-8 lg:mt-16 text-center z-10 max-w-4xl w-full">
         {/* Profile image with outer appearance effect */}
         <div className="relative inline-block group mb-12">
           {/* Outer glow effect */}

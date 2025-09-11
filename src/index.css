@@ -55,11 +55,8 @@
     box-sizing: border-box;
   }
   
-  /* Ensure containers don't overflow */
-  .container,
-  .max-w-4xl,
-  .max-w-6xl,
-  .max-w-7xl {
+  /* Ensure no element extends beyond the viewport */
+  *:not(svg):not(path) {
     max-width: 100%;
   }
 }
@@ -430,33 +427,4 @@ html {
   overflow: hidden;
 }
 
-/* Prevent horizontal scrolling globally */
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* Prevent horizontal scrolling on all elements */
-* {
-  max-width: 100%;
-}
-
-/* Special handling for absolute positioned elements */
-[class*="absolute"] {
-  max-width: none;
-}
-
-/* Ensure images don't cause overflow */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Ensure containers don't overflow */
-.container,
-.max-w-4xl,
-.max-w-6xl,
-.max-w-7xl {
-  max-width: 100%;
-  overflow-x: hidden;
-}
+  
