@@ -6,7 +6,6 @@ const LoadingScreen = ({ onComplete }) => {
   const [isComplete, setIsComplete] = useState(false);
   const canvasRef = useRef(null);
   const animationRef = useRef();
-  const [scanlinePosition, setScanlinePosition] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -21,15 +20,7 @@ const LoadingScreen = ({ onComplete }) => {
       });
     }, 100);
 
-    // Scanline animation
-    const scanlineInterval = setInterval(() => {
-      setScanlinePosition(prev => (prev + 2) % 100);
-    }, 50);
-
-    return () => {
-      clearInterval(timer);
-      clearInterval(scanlineInterval);
-    };
+    return () => clearInterval(timer);
   }, [onComplete]);
 
   // Interactive particle background
@@ -60,7 +51,6 @@ const LoadingScreen = ({ onComplete }) => {
         this.radius = Math.random() * 3 + 1;
         this.opacity = Math.random() * 0.5 + 0.3;
         this.color = `hsl(${Math.random() * 60 + 100}, 70%, 60%)`; // Green tones
-        this.pulse = Math.random() * Math.PI * 2;
       }
 
       update() {
@@ -82,10 +72,6 @@ const LoadingScreen = ({ onComplete }) => {
           this.vy += (dy / distance) * force * 0.1;
         }
 
-        // Pulsing effect
-        this.pulse += 0.05;
-        this.radius = Math.sin(this.pulse) * 1.5 + 2.5;
-
         // Damping
         this.vx *= 0.98;
         this.vy *= 0.98;
@@ -95,19 +81,6 @@ const LoadingScreen = ({ onComplete }) => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = this.color.replace('hsl', 'hsla').replace(')', `, ${this.opacity})`);
-        ctx.fill();
-        
-        // Glow effect
-        const gradient = ctx.createRadialGradient(
-          this.x, this.y, 0,
-          this.x, this.y, this.radius * 3
-        );
-        gradient.addColorStop(0, this.color.replace('hsl', 'hsla').replace(')', `, ${this.opacity * 0.8})`));
-        gradient.addColorStop(1, this.color.replace('hsl', 'hsla').replace(')', `, 0)`));
-        
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.radius * 3, 0, Math.PI * 2);
-        ctx.fillStyle = gradient;
         ctx.fill();
       }
     }
@@ -181,7 +154,7 @@ const LoadingScreen = ({ onComplete }) => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950 overflow-hidden"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-slate-900 via-green-900 to-emerald-900 overflow-hidden"
         >
           {/* Interactive Particle Background */}
           <canvas
@@ -189,33 +162,8 @@ const LoadingScreen = ({ onComplete }) => {
             className="absolute inset-0 w-full h-full"
           />
           
-          {/* Grid Pattern Overlay */}
-          <div className="absolute inset-0 opacity-10"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(16, 185, 129, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(16, 185, 129, 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: '50px 50px'
-            }}
-          ></div>
-          
-          {/* Scanline Effect */}
-          <div 
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background: `linear-gradient(
-                to bottom,
-                transparent 0%,
-                rgba(16, 185, 129, 0.1) ${scanlinePosition}%,
-                transparent ${scanlinePosition + 2}%,
-                transparent 100%
-              )`
-            }}
-          ></div>
-          
-          <div className="relative z-10 text-center max-w-4xl px-4">
-            {/* Holographic Logo/Name Animation */}
+          <div className="relative z-10 text-center">
+            {/* Logo/Name Animation with 3D effect */}
             <motion.div
               initial={{ scale: 0.8, opacity: 0, rotateY: -90 }}
               animate={{ scale: 1, opacity: 1, rotateY: 0 }}
@@ -226,103 +174,43 @@ const LoadingScreen = ({ onComplete }) => {
               }}
               className="mb-12 relative"
             >
-              {/* Holographic Ring */}
-              <motion.div
-                className="absolute -inset-8 rounded-full border-2 border-emerald-400/30"
-                animate={{ 
-                  rotate: 360,
-                  scale: [1, 1.05, 1]
-                }}
-                transition={{ 
-                  rotate: { duration: 20, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 3, repeat: Infinity, ease: "easeInOut" }
-                }}
-              />
-              
-              {/* Outer Glow */}
-              <motion.div
-                className="absolute -inset-6 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 blur-xl"
-                animate={{ 
-                  scale: [1, 1.1, 1],
-                  opacity: [0.3, 0.5, 0.3]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-              
-              {/* Main Logo Container */}
               <div className="relative inline-block">
-                <div className="relative">
-                  {/* 3D Effect Layers */}
-                  <div className="absolute -inset-2 bg-gradient-to-r from-emerald-600 to-teal-500 rounded-xl blur opacity-30"></div>
-                  <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-teal-400 rounded-xl blur"></div>
-                  
-                  {/* Main Logo */}
-                  <h1 className="relative text-7xl md:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 drop-shadow-2xl tracking-wider">
-                    DN
-                  </h1>
-                </div>
-              </div>
-              
-              {/* Data Stream Effect */}
-              <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-1">
-                {[...Array(8)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="w-1 h-6 bg-emerald-400 rounded-full"
-                    animate={{ 
-                      height: [10, 24, 10],
-                      opacity: [0.3, 1, 0.3]
-                    }}
-                    transition={{ 
-                      duration: 1, 
-                      repeat: Infinity,
-                      delay: i * 0.1,
-                      ease: "easeInOut"
-                    }}
-                  />
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Futuristic Terminal Text */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="mb-10"
-            >
-              <div className="inline-block bg-slate-800/50 backdrop-blur-sm border border-emerald-500/30 rounded-lg px-6 py-3">
-                <p className="text-emerald-300 font-mono text-lg md:text-xl tracking-wider">
-                  <span className="text-emerald-400">&gt; </span>
-                  Initializing Danish Nawaz Portfolio...
-                  <motion.span
-                    className="inline-block w-3 h-6 bg-emerald-400 ml-1"
-                    animate={{ opacity: [1, 0] }}
-                    transition={{ duration: 0.8, repeat: Infinity }}
-                  />
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Futuristic Progress Bar */}
-            <div className="w-full max-w-2xl mx-auto relative mb-8">
-              {/* Progress Track */}
-              <div className="h-6 bg-slate-800/50 backdrop-blur-sm rounded-full border border-emerald-500/30 overflow-hidden relative">
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/20 to-teal-900/20"></div>
-                
-                {/* Progress Fill */}
                 <motion.div
-                  className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full relative overflow-hidden"
+                  className="absolute -inset-4 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full blur-xl opacity-30"
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    opacity: [0.3, 0.5, 0.3]
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
+                <h1 className="relative text-7xl font-black bg-gradient-to-r from-green-300 via-emerald-200 to-teal-300 bg-clip-text text-transparent drop-shadow-2xl">
+                  DN
+                </h1>
+              </div>
+              <motion.p 
+                className="text-2xl text-emerald-100 mt-4 font-medium tracking-wider"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+              >
+                Danish Nawaz
+              </motion.p>
+            </motion.div>
+
+            {/* Progress Bar with Neumorphism */}
+            <div className="w-96 mx-auto relative">
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-full h-4 mb-6 overflow-hidden border border-slate-700 shadow-neumorphism-progress">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-green-500 to-emerald-600 rounded-full relative"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  {/* Animated Shine */}
+                  {/* Animated shine effect */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
                     animate={{ x: ['-100%', '100%'] }}
@@ -333,107 +221,60 @@ const LoadingScreen = ({ onComplete }) => {
                       ease: "linear"
                     }}
                   />
-                  
-                  {/* Particle Effects */}
-                  <div className="absolute inset-0">
-                    {[...Array(20)].map((_, i) => (
-                      <motion.div
-                        key={i}
-                        className="absolute w-1 h-1 bg-white rounded-full"
-                        style={{
-                          left: `${Math.random() * 100}%`,
-                          top: `${Math.random() * 100}%`
-                        }}
-                        animate={{ 
-                          y: [0, -20, 0],
-                          opacity: [0, 1, 0]
-                        }}
-                        transition={{ 
-                          duration: 2, 
-                          repeat: Infinity,
-                          delay: Math.random() * 2,
-                          ease: "easeInOut"
-                        }}
-                      />
-                    ))}
-                  </div>
                 </motion.div>
-                
-                {/* Glowing Edge */}
-                <div className="absolute inset-0 rounded-full shadow-[0_0_15px_rgba(16,185,129,0.5)] pointer-events-none"></div>
               </div>
-              
-              {/* Progress Percentage */}
               <motion.p
-                className="text-emerald-300 font-mono text-xl mt-3 tracking-wider"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="text-emerald-200 text-lg font-medium"
               >
-                SYSTEM STATUS: <span className="font-bold text-emerald-400">{Math.round(progress)}%</span> COMPLETE
+                Loading Portfolio... <span className="font-bold">{Math.round(progress)}%</span>
               </motion.p>
             </div>
 
-            {/* Data Visualization */}
+            {/* Interactive Elements */}
             <motion.div
-              className="flex justify-center gap-6 mb-12"
-              initial={{ opacity: 0, y: 20 }}
+              className="mt-12 flex justify-center gap-8"
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2, duration: 0.8 }}
+              transition={{ delay: 1, duration: 0.8 }}
             >
               {[...Array(5)].map((_, i) => (
-                <div key={i} className="flex flex-col items-center">
-                  <motion.div
-                    className="w-16 h-16 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-emerald-500/30 flex items-center justify-center mb-2"
-                    animate={{ 
-                      y: [0, -10, 0],
-                      boxShadow: [
-                        '0 0 5px rgba(16, 185, 129, 0.3)',
-                        '0 0 20px rgba(16, 185, 129, 0.6)',
-                        '0 0 5px rgba(16, 185, 129, 0.3)'
-                      ]
-                    }}
-                    transition={{ 
-                      duration: 2, 
-                      repeat: Infinity,
-                      delay: i * 0.2,
-                      ease: "easeInOut"
-                    }}
-                  >
-                    <div className="w-3 h-3 bg-emerald-400 rounded-full"></div>
-                  </motion.div>
-                  <div className="h-24 w-1 bg-gradient-to-t from-emerald-500/30 to-transparent rounded-full overflow-hidden">
-                    <motion.div
-                      className="w-full bg-emerald-400 rounded-full"
-                      style={{ height: `${Math.random() * 100}%` }}
-                      animate={{ 
-                        height: [`${Math.random() * 100}%`, `${Math.random() * 100}%`]
-                      }}
-                      transition={{ 
-                        duration: 3, 
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut"
-                      }}
-                    />
-                  </div>
-                </div>
+                <motion.div
+                  key={i}
+                  className="w-4 h-4 rounded-full bg-gradient-to-r from-green-400 to-emerald-500"
+                  animate={{ 
+                    y: [0, -15, 0],
+                    scale: [1, 1.2, 1]
+                  }}
+                  transition={{ 
+                    duration: 1.2, 
+                    repeat: Infinity,
+                    delay: i * 0.2,
+                    ease: "easeInOut"
+                  }}
+                />
               ))}
             </motion.div>
 
             {/* Interactive Hint */}
             <motion.p
-              className="text-emerald-400/70 text-sm font-mono tracking-wider"
+              className="mt-16 text-emerald-300/70 text-sm"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 2, duration: 1 }}
             >
-              &gt;&gt;&gt; MOVE CURSOR TO INTERACT WITH NEURAL NETWORK &lt;&lt;&lt;
+              Move your cursor around to interact with particles
             </motion.p>
           </div>
           
-          {/* Corner Decorations */}
-          <div className="absolute top-6 left-6 w-12 h-12 border-l-2 border-t-2 border-emerald-500/50"></div>
-          <div className="absolute top-6 right-6 w-12 h-12 border-r-2 border-t-2 border-emerald-500/50"></div>
-          <div className="absolute bottom-6 left-6 w-12 h-12 border-l-2 border-b-2 border-emerald-500/50"></div>
-          <div className="absolute bottom-6 right-6 w-12 h-12 border-r-2 border-b-2 border-emerald-500/50"></div>
+          {/* Custom styles */}
+          <style jsx>{`
+            .shadow-neumorphism-progress {
+              box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), 
+                          -5px -5px 10px rgba(255, 255, 255, 0.05);
+            }
+          `}</style>
         </motion.div>
       )}
     </AnimatePresence>
