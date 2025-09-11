@@ -1,14 +1,11 @@
-import project1 from "../assets/project1.webp";
 import NotesApp from "../assets/NotesApp.webp";
 import project3 from "../assets/project3.webp";
 import Meme from "../assets/Meme.webp";
 import project0 from '../assets/project0.webp';
-import project5 from "../assets/project5.webp";
 // import bg2 from "../assets/bg2.webp";
 import Chatty from "../assets/Chatty.webp";
 import project6 from "../assets/project6.webp";
 import project7 from "../assets/project7.webp";
-import personImage from "../assets/testimonial.webp";
 import { SiFlutter, SiDart } from "react-icons/si";
 
 
@@ -29,18 +26,18 @@ import {
 } from "@remixicon/react";
 
 export const NAVIGATION_LINKS = [
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Work Experience", href: "#work" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "/projects" },
+  { label: "Skills", href: "/skills" },
+  { label: "Experience", href: "/experience" },
+  { label: "Education", href: "/education" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const PROFILE = {
   name: "Danish Nawaz",
-  role: "Full Stack Web Developer",
+  role: "Android Developer",
   subheading:
-    "With 1 years of full-stack development experience, I build efficient, scalable web applications. Not on the job hunt, but always curious about interesting projects.",
+    "With 1 years of Android development experience, I build efficient, scalable mobile applications. Not on the job hunt, but always curious about interesting projects.",
 };
 
 export const PROJECTS = [
@@ -71,8 +68,8 @@ export const PROJECTS = [
   id: 5,
   title: "NutriScan",
   description:
-    "NutriScan is an AI-powered food analysis tool that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Angular, Firebase, and Material UI.",
-  techStack: ["Angular", "Firebase", "Material UI"],
+    "NutriScan is an AI-powered food analysis Android application that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Kotlin, Firebase, and Material Design.",
+  techStack: ["Kotlin", "Firebase", "Material Design", "Android"],
   imgSrc:project0 ,
   link: "https://nutriscan-food-labels-insights.onrender.com/",
   },
@@ -89,25 +86,25 @@ export const PROJECTS = [
 
   
   {
-    id: 1,
-    title: "Chatty – Real-Time Chat Application",
-    description:
-      "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
-    techStack: ["React", "Node.js", "Express", "MongoDB" , "Daisy Ui" ,"TailwindCSS" , "Shadcn"],
-    imgSrc: Chatty,
-    link: "https://chatty-kappa-ten.vercel.app/login",
+  id: 1,
+  title: "Chatty – Real-Time Chat Application",
+  description:
+    "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
+  techStack: ["React", "Node.js", "Express", "MongoDB" , "Daisy Ui" ,"TailwindCSS" , "Shadcn"],
+  imgSrc: Chatty,
+  link: "https://chatty-kappa-ten.vercel.app/login",
   },
 
   {
   id: 2,
   title: "NotesApp – Smart Note-Taking Application",
   description:
-    "NotesApp is a sleek and intuitive note-taking application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
-  techStack: ["Flutter", "Dart", "Firebase"],
+    "NotesApp is a sleek and intuitive note-taking Android application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
+  techStack: ["Kotlin", "Android", "Room Database", "Material Design"],
   imgSrc: NotesApp,
   link: "https://github.com/DAlgoSculptor/NotesApp", // Replace with your actual link
-},
-{
+  },
+  {
   id: 4,
   title: "Meme Generator App",
   description:
@@ -115,11 +112,25 @@ export const PROJECTS = [
   techStack: ["Flutter", "Dart", "REST API"],
   imgSrc: Meme,
   link: "https://github.com/DAlgoSculptor/MemeApp",
-},
+  },
+  
+  {
+  id: 8,
+  title: "CodeSwap",
+  description:
+    "CodeSwap is a collaborative platform for developers to share, discover, and discuss code snippets. It features syntax highlighting for multiple languages, real-time collaboration, and a clean, intuitive interface. Built with React, Node.js, and MongoDB for a seamless user experience.",
+  techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+  imgSrc: project3,
+  link: "https://codeswap-example.com",
+  },
 
 ];
 
 export const SKILLS = [
+  {
+    name: "Kotlin",
+    icon: <RiCodeSSlashLine className="text-purple-500" />,
+  },
   {
     name: "HTML5",
     icon: <RiHtml5Line className="text-orange-600" />,
@@ -157,6 +168,14 @@ export const SKILLS = [
     icon: <RiGitBranchLine className="text-pink-400" />,
   },
   {
+    name: "Java",
+    icon: <RiCodeSSlashLine className="text-red-500" />,
+  },
+  {
+    name: "Android",
+    icon: <RiCodeSSlashLine className="text-green-500" />,
+  },
+  {
     name: "Flutter",
     icon: <SiFlutter className="text-sky-500" />,
   },
@@ -164,29 +183,45 @@ export const SKILLS = [
     name: "Dart",
     icon: <SiDart className="text-cyan-600" />,
   },
-  
   {
-    name:"Git",
-    icon:<RiGitBranchLine className="text-orange-400" />
+    name: "Firebase",
+    icon: <RiDatabaseLine className="text-orange-500" />,
   },
-  { name: "Bootstrap", icon: <RiCodeSSlashLine className="text-purple-600" /> 
-
+  {
+    name: "REST API",
+    icon: <RiGitBranchLine className="text-blue-500" />,
   },
-
-
-
-
+  {
+    name: "Material UI",
+    icon: <RiCodeSSlashLine className="text-pink-500" />,
+  },
+  {
+    name: "Git",
+    icon: <RiGitBranchLine className="text-orange-400" />,
+  },
+  {
+    name: "XML",
+    icon: <RiCodeSSlashLine className="text-blue-600" />,
+  },
+  {
+    name: "Jetpack Compose",
+    icon: <RiCodeSSlashLine className="text-teal-400" />,
+  },
+  {
+    name: "Room Database",
+    icon: <RiDatabaseLine className="text-green-600" />,
+  },
 ];
 
 export const EXPERIENCES = [
   
   {
     yearRange: "2023 - 2024",
-    role: "Junior Software Developer",
+    role: "Junior Android Developer",
     company: "CodSoft",
     description:
-      "Worked on developing small-scale web applications and internal tools. Assisted in debugging and optimizing front-end performance. Gained hands-on experience with JavaScript, React, and MySQL databases.",
-    techStack: ["JavaScript", "React", "Bootstrap", "MySQL"],
+      "Worked on developing Android applications and internal tools. Assisted in debugging and optimizing app performance. Gained hands-on experience with Kotlin, Java, and Android SDK. Developed features for NutriScan and NotesApp applications.",
+    techStack: ["Kotlin", "Java", "Android", "Firebase", "REST API"],
   },
 ];
 
@@ -202,11 +237,3 @@ export const EDUCATION = [
     }
       
 ];
-
-export const TESTIMONIAL = {
-  name: "Hania Qureshi",
-  title: "CEO, TechCorp",
-  quote:
-    "Working with Danish was a game-changer. His expertise in full-stack development helped us scale our product with ease. His attention to detail and passion for quality are unmatched.",
-  image: personImage,
-};

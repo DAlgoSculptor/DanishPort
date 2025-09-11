@@ -1,29 +1,37 @@
+import { ThemeProvider } from "./contexts/ThemeContext"
+import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Projects from "./components/Projects"
-import Skills from "./components/Skills"
-import Experience from "./components/Experience"
-import Education from "./components/Education"
-import Testimonials from "./components/Testimonials"
-import Contact from "./components/Contact"
-
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Projects from "./pages/Projects"
+import Skills from "./pages/Skills"
+import Experience from "./pages/Experience"
+import Education from "./pages/Education"
+import Contact from "./pages/Contact"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfService from "./pages/TermsOfService"
 
 const App = () => {
   return (
-    <main className="mx-auto max-w-7xl overflow-x-hidden antialiased">
-      <div className="bg-image fixed inset-0 bg-cover bg-fixed bg-center"></div>
-      <div className="relative z-10">
-        <Navbar/>
-        <Hero/>
-        <Projects/>
-        <Skills/>
-        <Experience/>
-        <Education/>
-        <Testimonials/>
-        <Contact />
+    <ThemeProvider>
+      <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-300 flex flex-col">
+        <Navbar />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-    </main>
-  )
-}
+    </ThemeProvider>
+  );
+};
 
-export default App
+export default App;
