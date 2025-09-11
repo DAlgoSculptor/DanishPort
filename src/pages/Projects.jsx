@@ -1,7 +1,6 @@
 import { PROJECTS } from "../constants"
 import { Link } from "react-router-dom"
 import { RiExternalLinkLine } from "@remixicon/react"
-import Tilt from 'react-parallax-tilt';
 
 const Projects = () => {
     return (
@@ -16,20 +15,14 @@ const Projects = () => {
                     </p>
                 </div>
                 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
                     {PROJECTS.map((project, index) => (
-                        <Tilt
-                            key={project.id}
-                            tiltMaxAngleX={5}
-                            tiltMaxAngleY={5}
-                            perspective={1000}
-                            scale={1.02}
-                            transitionSpeed={1000}
-                            gyroscope={true}
+                        <div 
+                            key={project.id} 
                             className="flex flex-col animate-fade-in"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
-                            <div className="project-card flex-grow overflow-hidden rounded-2xl border border-green-400/20 transition-all duration-500 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow-lg hover:shadow-2xl group relative transform">
+                            <div className="project-card flex-grow overflow-hidden rounded-2xl border border-green-400/20 transition-all duration-500 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm shadow-lg hover:shadow-2xl group relative transform hover:-translate-y-2">
                                 {/* Gradient overlay on hover */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 rounded-2xl"></div>
                                 
@@ -83,7 +76,7 @@ const Projects = () => {
                                     </div>
                                 </div>
                             </div>
-                        </Tilt>
+                        </div>
                     ))}
                 </div>
                 

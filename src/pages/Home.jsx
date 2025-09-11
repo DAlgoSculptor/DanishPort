@@ -179,7 +179,7 @@ const Home = () => {
         </div>
         
         {/* Device Mockups Section - Positioned at the very bottom */}
-        <div className="relative mt-20 mb-16 flex justify-center items-center gap-8 flex-wrap z-10 max-w-6xl px-4">
+        <div className="relative mt-20 mb-16 flex justify-center items-center gap-8 flex-wrap z-10 w-full px-4">
           {/* Android Phone Mockup */}
           <div className="relative transform rotate-3 hover:rotate-1 transition-transform duration-500">
             <div className="w-48 h-96 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-2 shadow-2xl">

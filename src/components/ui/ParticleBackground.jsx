@@ -62,8 +62,8 @@ const ParticleBackground = () => {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
         ctx.fillStyle = isDark 
-          ? `rgba(16, 185, 129, ${this.opacity})` 
-          : `rgba(16, 185, 129, ${this.opacity})`;
+          ? `rgba(99, 102, 241, ${this.opacity})` 
+          : `rgba(59, 130, 246, ${this.opacity})`;
         ctx.fill();
       }
     }
@@ -103,8 +103,8 @@ const ParticleBackground = () => {
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = isDark 
-              ? `rgba(16, 185, 129, ${0.1 * (1 - distance / 100)})` 
-              : `rgba(16, 185, 129, ${0.1 * (1 - distance / 100)})`;
+              ? `rgba(99, 102, 241, ${0.1 * (1 - distance / 100)})` 
+              : `rgba(59, 130, 246, ${0.1 * (1 - distance / 100)})`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -134,7 +134,7 @@ const ParticleBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none opacity-60 transition-opacity duration-1000"
+      className="absolute inset-0 pointer-events-none opacity-60"
       style={{ zIndex: 1 }}
     />
   );
