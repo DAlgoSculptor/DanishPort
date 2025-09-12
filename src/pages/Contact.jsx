@@ -164,7 +164,7 @@ const Contact = () => {
                                         <div className="ml-4">
                                             <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Phone</h4>
                                             <a 
-                                                href="tel:+919876543210" 
+                                                href="tel:+916203919978" 
                                                 className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                                             >
                                                 +91 98765 43210
