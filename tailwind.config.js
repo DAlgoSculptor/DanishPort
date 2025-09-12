@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Augment-inspired color palette
+        // Augment Color System
         augment: {
           50: '#f0f4ff',
           100: '#e0e9ff',
@@ -76,20 +76,29 @@ export default {
         'float': 'float 6s ease-in-out infinite',
         'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
         'gradient-x': 'gradientX 3s ease infinite',
+        'gradient-shift': 'gradient-shift 4s ease infinite',
       },
       backdropBlur: {
         xs: '2px',
+        xl: '24px',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'augment-gradient': 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)',
         'augment-dark': 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-secondary': 'var(--gradient-secondary)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-surface': 'var(--gradient-surface)',
       },
       boxShadow: {
         'augment': '0 4px 6px -1px rgba(99, 102, 241, 0.1), 0 2px 4px -1px rgba(99, 102, 241, 0.06)',
         'augment-lg': '0 10px 15px -3px rgba(99, 102, 241, 0.1), 0 4px 6px -2px rgba(99, 102, 241, 0.05)',
         'augment-xl': '0 20px 25px -5px rgba(99, 102, 241, 0.1), 0 10px 10px -5px rgba(99, 102, 241, 0.04)',
+        'augment-soft': '0 2px 8px rgba(99, 102, 241, 0.08), 0 1px 3px rgba(99, 102, 241, 0.06)',
+        'augment-medium': '0 4px 16px rgba(99, 102, 241, 0.12), 0 2px 6px rgba(99, 102, 241, 0.08)',
+        'augment-strong': '0 8px 32px rgba(99, 102, 241, 0.16), 0 4px 12px rgba(99, 102, 241, 0.12)',
       },
       borderRadius: {
         'augment': '0.75rem',
