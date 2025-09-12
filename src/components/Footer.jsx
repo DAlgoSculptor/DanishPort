@@ -10,25 +10,24 @@ const Footer = () => {
         {/* Top border decoration */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
         
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          {/* Logo/Name with Animated Person Image */}
-          <div className="flex items-center gap-4">
-            <div className="flex flex-col">
-              <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
-                Danish Nawaz
-              </h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-                Android Developer
-              </p>
-            </div>
-            {/* Animated Person Image */}
-            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
-              <img 
-                src={animatedPerson} 
-                alt="Animated Person" 
-                className="w-full h-full object-contain"
-              />
-            </div>
+        <div className="flex flex-col items-center gap-6">
+          {/* Animated Person Image in center */}
+          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+            <img 
+              src={animatedPerson} 
+              alt="Animated Person" 
+              className="w-full h-full object-contain"
+            />
+          </div>
+          
+          {/* Logo/Name */}
+          <div className="flex flex-col items-center">
+            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
+              Danish Nawaz
+            </h3>
+            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
+              Android Developer
+            </p>
           </div>
           
           {/* Social Links */}
