@@ -1,5 +1,6 @@
 import { SKILLS } from "../constants"
 import { Link } from "react-router-dom"
+import AnimatedPerson from "../assets/Animated person.png"
 
 const Skills = () => {
     return (
@@ -12,6 +13,28 @@ const Skills = () => {
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
                         Here are the technologies and tools I specialize in as an Android developer. I continuously learn and adapt to new mobile technologies.
                     </p>
+                </div>
+                
+                {/* Animated Person with Quote */}
+                <div className="flex flex-col md:flex-row items-center justify-center mb-12 gap-8 animate-fade-in">
+                    <div className="relative">
+                        <div className="w-32 h-32 md:w-40 md:h-40">
+                            <img 
+                                src={AnimatedPerson} 
+                                alt="Animated Person" 
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                    </div>
+                    
+                    <div className="relative max-w-md">
+                        <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                            <p className="text-lg text-slate-800 dark:text-slate-200 italic">
+                                "With expertise in Android development and cross-platform solutions, I turn complex technical challenges into elegant, user-friendly mobile experiences."
+                            </p>
+                        </div>
+                        <div className="absolute -left-4 top-8 w-8 h-8 bg-white dark:bg-slate-800 border-t border-l border-slate-200 dark:border-slate-700 transform rotate-45"></div>
+                    </div>
                 </div>
                 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">

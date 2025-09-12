@@ -22,7 +22,7 @@ const Footer = () => {
           
           {/* Logo/Name */}
           <div className="flex flex-col items-center">
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
+            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
               Danish Nawaz
             </h3>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
