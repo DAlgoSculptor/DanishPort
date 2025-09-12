@@ -64,22 +64,22 @@ const Home = () => {
           </div>
         </div>
         
-        {/* Enhanced role with refined styling - Positioned just above the name */}
+        {/* Enhanced name with sophisticated typography and neumorphism - Positioned just above the role */}
         <div className="relative mt-8 mb-4">
-          <h2 className="text-2xl md:text-3xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-emerald-400 to-teal-300 animate-fade-in animation-delay-500">
-            {PROFILE.role}
-          </h2>
-        </div>
-        
-        {/* Enhanced name with sophisticated typography and neumorphism */}
-        <div className="relative mt-2 mb-6">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 animate-fade-in text-center whitespace-nowrap">
             {PROFILE.name}
           </h1>
+        </div>
+        
+        {/* Enhanced role with refined styling - Positioned just below the name */}
+        <div className="relative mt-2 mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-green-500 via-emerald-400 to-teal-300 animate-fade-in animation-delay-500">
+            {PROFILE.role}
+          </h2>
           <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
         </div>
         
-        {/* Enhanced subheading with neumorphism - Positioned just below the name */}
+        {/* Enhanced subheading with neumorphism - Positioned just below the role */}
         <div className="relative max-w-3xl px-6 py-4 rounded-2xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-lg border border-white/30 dark:border-slate-700/50 shadow-neumorphism mb-8 mt-6 animate-fade-in animation-delay-700 mx-auto">
           <p className="text-left text-lg md:text-xl text-slate-700 dark:text-slate-300 font-medium">
             {PROFILE.subheading}
