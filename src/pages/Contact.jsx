@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { RiMailLine, RiPhoneLine, RiMapPinLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine } from "@remixicon/react";
+import animatedPerson from "../assets/Animated person.png";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -38,10 +39,10 @@ const Contact = () => {
     };
     
     return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950 min-h-screen">
+        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-950 min-h-screen">
             <div className="container mx-auto px-4">
-                <div className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
                         Get In Touch
                     </h1>
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
@@ -49,195 +50,184 @@ const Contact = () => {
                     </p>
                 </div>
                 
-                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-                    {/* Contact Information */}
-                    <div className="animate-fade-in">
-                        <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Contact Information</h2>
-                        <p className="text-slate-700 dark:text-slate-300 mb-8">
-                            I'm always open to discussing new opportunities, creative projects, or partnership proposals.
-                        </p>
-                        
-                        <div className="space-y-6">
-                            <div className="flex items-start group">
-                                <div className="flex-shrink-0 p-3 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 rounded-lg transition-all duration-300 group-hover:bg-green-200 dark:group-hover:bg-green-800/50">
-                                    <RiMailLine className="w-6 h-6" />
-                                </div>
-                                <div className="ml-4">
-                                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Email</h3>
-                                    <a 
-                                        href="mailto:helpbynutriscanai@gmail.com" 
-                                        className="text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
-                                    >
-                                        helpbynutriscanai@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div className="flex items-start group">
-                                <div className="flex-shrink-0 p-3 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 rounded-lg transition-all duration-300 group-hover:bg-green-200 dark:group-hover:bg-green-800/50">
-                                    <RiPhoneLine className="w-6 h-6" />
-                                </div>
-                                <div className="ml-4">
-                                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Phone</h3>
-                                    <a 
-                                        href="tel:+919876543210" 
-                                        className="text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200"
-                                    >
-                                        +91 98765 43210
-                                    </a>
-                                </div>
-                            </div>
-                            
-                            <div className="flex items-start group">
-                                <div className="flex-shrink-0 p-3 bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300 rounded-lg transition-all duration-300 group-hover:bg-green-200 dark:group-hover:bg-green-800/50">
-                                    <RiMapPinLine className="w-6 h-6" />
-                                </div>
-                                <div className="ml-4">
-                                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white">Location</h3>
-                                    <p className="text-slate-700 dark:text-slate-300">
-                                        Ambala, Haryana, India
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="mt-12">
-                            <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Connect With Me</h3>
-                            <div className="flex space-x-4">
-                                <a 
-                                    href="https://github.com/DAlgoSculptor" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-200 dark:border-slate-700 group"
-                                >
-                                    <RiGithubLine className="w-5 h-5 text-slate-700 dark:text-slate-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200" />
-                                </a>
-                                <a 
-                                    href="https://www.linkedin.com/in/danish-nawaz-86154028a/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-200 dark:border-slate-700 group"
-                                >
-                                    <RiLinkedinLine className="w-5 h-5 text-slate-700 dark:text-slate-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200" />
-                                </a>
-                                <a 
-                                    href="https://x.com/DNawaz65591" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="p-3 bg-white dark:bg-slate-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-slate-200 dark:border-slate-700 group"
-                                >
-                                    <RiTwitterXLine className="w-5 h-5 text-slate-700 dark:text-slate-300 group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-200" />
-                                </a>
-                            </div>
+                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Animated Person Image without blinking eyes */}
+                    <div className="flex justify-center">
+                        <div className="w-80 h-96 md:w-96 md:h-[450px] flex items-center justify-center">
+                            <img 
+                                src={animatedPerson} 
+                                alt="Animated Person" 
+                                className="w-full h-full object-contain"
+                            />
                         </div>
                     </div>
                     
-                    {/* Contact Form */}
-                    <div className="animate-fade-in animation-delay-200">
-                        <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Send Me a Message</h2>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div>
-                                <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                                    Name
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 shadow-sm"
-                                    placeholder="Your name"
-                                />
-                            </div>
+                    {/* Contact Form and Information */}
+                    <div>
+                        <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white/30 dark:border-slate-700/50">
+                            <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
+                                Send Me a Message
+                            </h2>
                             
-                            <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                                    Email
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    required
-                                    className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 shadow-sm"
-                                    placeholder="your.email@example.com"
-                                />
-                            </div>
-                            
-                            <div>
-                                <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                                    Message
-                                </label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                    required
-                                    rows={5}
-                                    className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-lg bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 shadow-sm"
-                                    placeholder="Your message here..."
-                                ></textarea>
-                            </div>
-                            
-                            <button
-                                type="submit"
-                                disabled={isSubmitting}
-                                className={`w-full py-3 px-4 rounded-lg font-medium text-white transition-all duration-200 transform hover:-translate-y-1 shadow-md ${
-                                    isSubmitting 
-                                        ? 'bg-green-400 cursor-not-allowed' 
-                                        : 'bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700'
-                                }`}
-                            >
-                                {isSubmitting ? 'Sending...' : 'Send Message'}
-                            </button>
-                            
-                            {submitStatus === "success" && (
-                                <div className="p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg animate-fade-in">
-                                    Thank you for your message! I'll get back to you soon.
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                <div>
+                                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                                        Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
+                                        placeholder="Your name"
+                                    />
                                 </div>
-                            )}
-                        </form>
+                                
+                                <div>
+                                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                                        Email
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
+                                        placeholder="your.email@example.com"
+                                    />
+                                </div>
+                                
+                                <div>
+                                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                                        Message
+                                    </label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows={5}
+                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
+                                        placeholder="Your message here..."
+                                    ></textarea>
+                                </div>
+                                
+                                <button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className={`w-full py-3 px-4 rounded-xl font-medium text-white transition-all duration-300 shadow-lg ${
+                                        isSubmitting 
+                                            ? 'bg-blue-400 cursor-not-allowed' 
+                                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl'
+                                    }`}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </button>
+                                
+                                {submitStatus === "success" && (
+                                    <div className="p-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl">
+                                        Thank you for your message! I'll get back to you soon.
+                                    </div>
+                                )}
+                            </form>
+                            
+                            {/* Contact Information */}
+                            <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-700">
+                                <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Contact Information</h3>
+                                
+                                <div className="space-y-4">
+                                    <div className="flex items-center">
+                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
+                                            <RiMailLine className="w-5 h-5" />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Email</h4>
+                                            <a 
+                                                href="mailto:helpbynutriscanai@gmail.com" 
+                                                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                                            >
+                                                helpbynutriscanai@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex items-center">
+                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
+                                            <RiPhoneLine className="w-5 h-5" />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Phone</h4>
+                                            <a 
+                                                href="tel:+919876543210" 
+                                                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+                                            >
+                                                +91 98765 43210
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className="flex items-center">
+                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
+                                            <RiMapPinLine className="w-5 h-5" />
+                                        </div>
+                                        <div className="ml-4">
+                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Location</h4>
+                                            <p className="text-slate-700 dark:text-slate-300">
+                                                Ambala, Haryana, India
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="mt-8">
+                                    <h4 className="text-lg font-semibold mb-4 text-slate-900 dark:text-white">Connect With Me</h4>
+                                    <div className="flex space-x-4">
+                                        <a 
+                                            href="https://github.com/DAlgoSculptor" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
+                                        >
+                                            <RiGithubLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                                        </a>
+                                        <a 
+                                            href="https://www.linkedin.com/in/danish-nawaz-86154028a/" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
+                                        >
+                                            <RiLinkedinLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                                        </a>
+                                        <a 
+                                            href="https://x.com/DNawaz65591" 
+                                            target="_blank" 
+                                            rel="noopener noreferrer"
+                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
+                                        >
+                                            <RiTwitterXLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div className="mt-16 text-center animate-fade-in animation-delay-500">
+                <div className="mt-16 text-center">
                     <Link 
                         to="/" 
-                        className="inline-block px-6 py-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors duration-200 shadow-md transform hover:-translate-y-1"
+                        className="inline-block px-6 py-3 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 shadow-lg"
                     >
                         ← Back to Home
                     </Link>
                 </div>
             </div>
-            
-            {/* Custom styles */}
-            <style>{`
-                .animate-fade-in {
-                    animation: fadeInUp 0.6s ease-out forwards;
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                
-                .animation-delay-200 {
-                    animation-delay: 0.2s;
-                }
-                
-                .animation-delay-500 {
-                    animation-delay: 0.5s;
-                }
-                
-                @keyframes fadeInUp {
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-            `}</style>
         </section>
     )
 }
