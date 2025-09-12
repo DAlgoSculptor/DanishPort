@@ -10,7 +10,7 @@ const Experience = () => {
                         Work Experience
                     </h1>
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        My professional journey and the experiences that have shaped my skills and expertise.
+                        My journey as an Android developer and the experiences that have shaped my mobile development skills and expertise.
                     </p>
                 </div>
                 

@@ -11,7 +11,7 @@ const Projects = () => {
                         My Projects
                     </h1>
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        Here are some of my recent projects. Each one represents a unique challenge and solution.
+                        Here are some of my recent Android and mobile development projects. Each one represents a unique challenge and solution in mobile app development.
                     </p>
                 </div>
                 

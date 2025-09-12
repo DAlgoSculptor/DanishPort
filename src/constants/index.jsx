@@ -41,131 +41,84 @@ export const PROFILE = {
 };
 
 export const PROJECTS = [
-
-
-
-   {
-  id: 6,
-  title: "CodeAnalyzer",
-  description:
-    "CodeAnalyzer is an AI-powered code analysis tool that helps developers detect bugs, measure code quality, and visualize complexity in real time. It features interactive dashboards, advanced code metrics, and a clean, responsive interface designed to improve developer productivity and software reliability. Built with a focus on efficiency, scalability, and seamless user experience",
-  techStack: ["React" , "Node.js" , "Typescript" , "Supabase"],
-  imgSrc:project6 ,
-  link: "https://code-analyzer-swart.vercel.app/",
+  {
+    id: 1,
+    title: "NutriScan",
+    description:
+      "NutriScan is an AI-powered food analysis Android application that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Kotlin, Firebase, and Material Design.",
+    techStack: ["Kotlin", "Firebase", "Material Design", "Android"],
+    imgSrc: project0,
+    link: "https://nutriscan-food-labels-insights.onrender.com/",
   },
-   {
-  id: 7,
-  title: "LernoVate",
-  description:
-    "LERNOVATE is a modern, responsive learning platform landing page designed to showcase educational services in an engaging and professional manner. It features an elegant UI with smooth navigation, animated components, and a well-structured layout to highlight core offerings, testimonials, and key statistics. The platform emphasizes accessibility, performance optimization, and a mobile-friendly design to ensure a seamless user experience across all devices",
-  techStack: ["Next.js" ,"React", "Typescript" , "TailwindCSS" , "Shadcn" , "Framer Motion" , "Supabase"],
-  imgSrc:project7 ,
-  link: "https://lernovate-nepal.vercel.app/",
+  {
+    id: 2,
+    title: "NotesApp – Smart Note-Taking Application",
+    description:
+      "NotesApp is a sleek and intuitive note-taking Android application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
+    techStack: ["Kotlin", "Android", "Room Database", "Material Design"],
+    imgSrc: NotesApp,
+    link: "https://github.com/DAlgoSculptor/NotesApp",
   },
-
-
-   {
-  id: 5,
-  title: "NutriScan",
-  description:
-    "NutriScan is an AI-powered food analysis Android application that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Kotlin, Firebase, and Material Design.",
-  techStack: ["Kotlin", "Firebase", "Material Design", "Android"],
-  imgSrc:project0 ,
-  link: "https://nutriscan-food-labels-insights.onrender.com/",
-  },
-
   {
     id: 3,
+    title: "Meme Generator App",
+    description:
+      "A fun Flutter-based meme app that fetches trending memes from APIs, displays them with a smooth UI, and allows users to share their favorites. Built with performance and responsiveness in mind.",
+    techStack: ["Flutter", "Dart", "REST API"],
+    imgSrc: Meme,
+    link: "https://github.com/DAlgoSculptor/MemeApp",
+  },
+  {
+    id: 4,
+    title: "CodeSwap",
+    description:
+      "CodeSwap is a collaborative platform for developers to share, discover, and discuss code snippets. It features syntax highlighting for multiple languages, real-time collaboration, and a clean, intuitive interface. Built with React, Node.js, and MongoDB for a seamless user experience.",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
+    imgSrc: project3,
+    link: "https://codeswap-example.com",
+  },
+  {
+    id: 5,
+    title: "Chatty – Real-Time Chat Application",
+    description:
+      "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Daisy Ui", "TailwindCSS", "Shadcn"],
+    imgSrc: Chatty,
+    link: "https://chatty-kappa-ten.vercel.app/login",
+  },
+  {
+    id: 6,
     title: "Coding Tracker",
     description:
       "Coding Tracker is a personal portfolio tool that automatically syncs solved coding problems from platforms like LeetCode and Codeforces. It features real-time API integration, automated data synchronization, and a clean, searchable interface to browse problems, view solution code, and track progress seamlessly",
-    techStack: ["React.js", "Node.js","Typescript" , "Supabase" , "LeetCode GraphQL API" , "Codeforces API"],
+    techStack: ["React.js", "Node.js", "Typescript", "Supabase", "LeetCode GraphQL API", "Codeforces API"],
     imgSrc: project3,
     link: "https://code-tracker-rose.vercel.app/",
   },
-
-  
   {
-  id: 1,
-  title: "Chatty – Real-Time Chat Application",
-  description:
-    "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
-  techStack: ["React", "Node.js", "Express", "MongoDB" , "Daisy Ui" ,"TailwindCSS" , "Shadcn"],
-  imgSrc: Chatty,
-  link: "https://chatty-kappa-ten.vercel.app/login",
-  },
-
-  {
-  id: 2,
-  title: "NotesApp – Smart Note-Taking Application",
-  description:
-    "NotesApp is a sleek and intuitive note-taking Android application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
-  techStack: ["Kotlin", "Android", "Room Database", "Material Design"],
-  imgSrc: NotesApp,
-  link: "https://github.com/DAlgoSculptor/NotesApp", // Replace with your actual link
+    id: 7,
+    title: "CodeAnalyzer",
+    description:
+      "CodeAnalyzer is an AI-powered code analysis tool that helps developers detect bugs, measure code quality, and visualize complexity in real time. It features interactive dashboards, advanced code metrics, and a clean, responsive interface designed to improve developer productivity and software reliability. Built with a focus on efficiency, scalability, and seamless user experience",
+    techStack: ["React", "Node.js", "Typescript", "Supabase"],
+    imgSrc: project6,
+    link: "https://code-analyzer-swart.vercel.app/",
   },
   {
-  id: 4,
-  title: "Meme Generator App",
-  description:
-    "A fun Flutter-based meme app that fetches trending memes from APIs, displays them with a smooth UI, and allows users to share their favorites. Built with performance and responsiveness in mind.",
-  techStack: ["Flutter", "Dart", "REST API"],
-  imgSrc: Meme,
-  link: "https://github.com/DAlgoSculptor/MemeApp",
+    id: 8,
+    title: "LernoVate",
+    description:
+      "LERNOVATE is a modern, responsive learning platform landing page designed to showcase educational services in an engaging and professional manner. It features an elegant UI with smooth navigation, animated components, and a well-structured layout to highlight core offerings, testimonials, and key statistics. The platform emphasizes accessibility, performance optimization, and a mobile-friendly design to ensure a seamless user experience across all devices",
+    techStack: ["Next.js", "React", "Typescript", "TailwindCSS", "Shadcn", "Framer Motion", "Supabase"],
+    imgSrc: project7,
+    link: "https://lernovate-nepal.vercel.app/",
   },
-  
-  {
-  id: 8,
-  title: "CodeSwap",
-  description:
-    "CodeSwap is a collaborative platform for developers to share, discover, and discuss code snippets. It features syntax highlighting for multiple languages, real-time collaboration, and a clean, intuitive interface. Built with React, Node.js, and MongoDB for a seamless user experience.",
-  techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-  imgSrc: project3,
-  link: "https://codeswap-example.com",
-  },
-
 ];
 
 export const SKILLS = [
   {
     name: "Kotlin",
     icon: <RiCodeSSlashLine className="text-purple-500" />,
-  },
-  {
-    name: "HTML5",
-    icon: <RiHtml5Line className="text-orange-600" />,
-  },
-  {
-    name: "CSS3",
-    icon: <RiCss3Line className="text-blue-500" />,
-  },
-  {
-    name: "JavaScript",
-    icon: <RiJavascriptLine className="text-yellow-500" />,
-
-  },
-  { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
-  { name: "Django", icon: <RiServerLine className="text-green-700" /> },
-
-  {
-    name: "React",
-    icon: <RiReactjsLine className="text-blue-400" />,
-  },
-  {
-    name: "Node.js",
-    icon: <RiNodeTree className="text-green-500" />,
-  },
-  {
-    name: "MongoDB",
-    icon: <RiDatabaseLine className="text-green-600" />,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <RiCodeSSlashLine className="text-teal-400" />,
-  },
-  {
-    name: "GraphQL",
-    icon: <RiGitBranchLine className="text-pink-400" />,
   },
   {
     name: "Java",
@@ -188,16 +141,8 @@ export const SKILLS = [
     icon: <RiDatabaseLine className="text-orange-500" />,
   },
   {
-    name: "REST API",
-    icon: <RiGitBranchLine className="text-blue-500" />,
-  },
-  {
     name: "Material UI",
     icon: <RiCodeSSlashLine className="text-pink-500" />,
-  },
-  {
-    name: "Git",
-    icon: <RiGitBranchLine className="text-orange-400" />,
   },
   {
     name: "XML",
@@ -210,6 +155,48 @@ export const SKILLS = [
   {
     name: "Room Database",
     icon: <RiDatabaseLine className="text-green-600" />,
+  },
+  {
+    name: "REST API",
+    icon: <RiGitBranchLine className="text-blue-500" />,
+  },
+  {
+    name: "Git",
+    icon: <RiGitBranchLine className="text-orange-400" />,
+  },
+  {
+    name: "HTML5",
+    icon: <RiHtml5Line className="text-orange-600" />,
+  },
+  {
+    name: "CSS3",
+    icon: <RiCss3Line className="text-blue-500" />,
+  },
+  {
+    name: "JavaScript",
+    icon: <RiJavascriptLine className="text-yellow-500" />,
+  },
+  { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
+  { name: "Django", icon: <RiServerLine className="text-green-700" /> },
+  {
+    name: "React",
+    icon: <RiReactjsLine className="text-blue-400" />,
+  },
+  {
+    name: "Node.js",
+    icon: <RiNodeTree className="text-green-500" />,
+  },
+  {
+    name: "MongoDB",
+    icon: <RiDatabaseLine className="text-green-600" />,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: <RiCodeSSlashLine className="text-teal-400" />,
+  },
+  {
+    name: "GraphQL",
+    icon: <RiGitBranchLine className="text-pink-400" />,
   },
 ];
 

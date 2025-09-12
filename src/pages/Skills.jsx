@@ -10,7 +10,7 @@ const Skills = () => {
                         My Skills
                     </h1>
                     <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        Here are the technologies and tools I'm proficient in. I continuously learn and adapt to new technologies.
+                        Here are the technologies and tools I specialize in as an Android developer. I continuously learn and adapt to new mobile technologies.
                     </p>
                 </div>
                 
@@ -42,9 +42,9 @@ const Skills = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Frontend Development</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Android Development</h3>
                             <p className="text-slate-700 dark:text-slate-300">
-                                Creating responsive, interactive user interfaces with modern frameworks like React, Vue, and Angular. Focusing on performance, accessibility, and user experience.
+                                Building efficient, scalable Android applications using Kotlin, Java, and modern Android development practices. Focusing on performance, user experience, and clean architecture.
                             </p>
                         </div>
                         <div className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
@@ -53,9 +53,9 @@ const Skills = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Backend Development</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Cross-Platform Development</h3>
                             <p className="text-slate-700 dark:text-slate-300">
-                                Building robust server-side applications with Node.js, Python, and database integration. Ensuring scalability, security, and efficient data management.
+                                Creating cross-platform mobile applications with Flutter and Dart. Building consistent, high-performance apps for both Android and iOS platforms.
                             </p>
                         </div>
                         <div className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
@@ -64,9 +64,9 @@ const Skills = () => {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Full-Stack Solutions</h3>
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Mobile Solutions</h3>
                             <p className="text-slate-700 dark:text-slate-300">
-                                End-to-end development of web applications with seamless integration between frontend and backend. Focus on delivering complete, functional solutions.
+                                End-to-end development of mobile applications with seamless integration between frontend and backend services. Focus on delivering complete, functional mobile solutions.
                             </p>
                         </div>
                     </div>
