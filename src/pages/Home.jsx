@@ -1,6 +1,8 @@
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiDownloadLine } from "@remixicon/react";
 import NewDanishImage from "../assets/NewDanish.jpg";
+import NutriScanVideo from "../assets/Nutri.mp4";
+import CodeSwapVideo from "../assets/CodeSwap.mp4";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -168,9 +170,8 @@ const Home = () => {
           <Link to="/education" className="p-6 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-2xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-center group transform hover:-translate-y-2">
             <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-green-200 group-hover:to-emerald-200 dark:group-hover:from-green-800/50 dark:group-hover:to-emerald-800/50 transition-all duration-300 shadow-neumorphism-inner">
               <svg className="w-7 h-7 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                <path d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
               </svg>
             </div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-green-600 dark:group-hover:text-green-400 transition-colors duration-300">Education</h3>
@@ -180,44 +181,38 @@ const Home = () => {
         
         {/* Device Mockups Section - Positioned at the very bottom */}
         <div className="relative mt-20 mb-16 flex justify-center items-center gap-8 flex-wrap z-10 w-full px-4">
-          {/* Android Phone Mockup */}
-          <div className="relative transform rotate-3 hover:rotate-1 transition-transform duration-500">
-            <div className="w-48 h-96 bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-2 shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-b from-slate-700 to-slate-800 rounded-2xl overflow-hidden relative">
-                {/* Android Status Bar */}
-                <div className="absolute top-0 left-0 right-0 h-6 bg-black/20 flex items-center justify-between px-4 text-white text-xs">
-                  <span>9:41</span>
-                  <div className="flex gap-1">
-                    <span>📶</span>
-                    <span>🔋</span>
+          {/* NutriScan iPhone Mockup */}
+          <div className="relative flex flex-col items-center">
+            <div className="w-40 h-80 bg-black rounded-3xl p-2 shadow-2xl">
+              <div className="w-full h-full bg-gradient-to-b from-slate-900 to-black rounded-2xl overflow-hidden relative">
+                {/* iPhone Notch */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-black rounded-b-2xl"></div>
+                
+                {/* iPhone Screen Content */}
+                <div className="h-full w-full flex items-center justify-center p-0 m-0">
+                  <div className="w-full h-full flex items-center justify-center bg-black overflow-hidden">
+                    <video 
+                      src={NutriScanVideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 
-                {/* Android Screen Content */}
-                <div className="pt-8 h-full flex flex-col items-center justify-center p-4">
-                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-white font-bold text-lg mb-1">NutriScan</h3>
-                  <p className="text-slate-300 text-xs text-center">AI-powered food analysis tool</p>
-                </div>
-                
-                {/* Android Navigation Bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-10 flex items-center justify-center">
-                  <div className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-slate-400"></div>
-                    <div className="w-6 h-2 rounded-full bg-slate-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-slate-400"></div>
-                  </div>
-                </div>
+                {/* iPhone Home Indicator */}
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-white rounded-full"></div>
               </div>
+            </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">NutriScan</h3>
             </div>
           </div>
           
-          {/* iPhone Mockup */}
-          <div className="relative transform -rotate-3 hover:-rotate-1 transition-transform duration-500">
+          {/* NotesApp iPhone Mockup */}
+          <div className="relative flex flex-col items-center">
             <div className="w-40 h-80 bg-black rounded-3xl p-2 shadow-2xl">
               <div className="w-full h-full bg-gradient-to-b from-slate-900 to-black rounded-2xl overflow-hidden relative">
                 {/* iPhone Notch */}
@@ -238,41 +233,38 @@ const Home = () => {
                 <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-white rounded-full"></div>
               </div>
             </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">NotesApp</h3>
+            </div>
           </div>
           
-          {/* CodeSwap Mockup */}
-          <div className="relative transform rotate-[-3deg] hover:rotate-[-1deg] transition-transform duration-500">
-            <div className="w-44 h-88 bg-gradient-to-br from-blue-800 to-blue-900 rounded-3xl p-2 shadow-2xl">
-              <div className="w-full h-full bg-gradient-to-b from-blue-700 to-blue-800 rounded-2xl overflow-hidden relative">
-                {/* CodeSwap Status Bar */}
-                <div className="absolute top-0 left-0 right-0 h-6 bg-black/20 flex items-center justify-between px-4 text-white text-xs">
-                  <span>9:41</span>
-                  <div className="flex gap-1">
-                    <span>📶</span>
-                    <span>🔋</span>
-                  </div>
-                </div>
+          {/* CodeSwap iPhone Mockup */}
+          <div className="relative flex flex-col items-center">
+            <div className="w-40 h-80 bg-black rounded-3xl p-2 shadow-2xl">
+              <div className="w-full h-full bg-gradient-to-b from-slate-900 to-black rounded-2xl overflow-hidden relative">
+                {/* iPhone Notch */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-6 bg-black rounded-b-2xl"></div>
                 
                 {/* CodeSwap Screen Content */}
-                <div className="pt-8 h-full flex flex-col items-center justify-center p-4">
-                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 w-15 h-15 rounded-2xl flex items-center justify-center mb-4">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                    </svg>
+                <div className="h-full w-full flex items-center justify-center p-0 m-0">
+                  <div className="w-full h-full flex items-center justify-center bg-black overflow-hidden">
+                    <video 
+                      src={CodeSwapVideo}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-1">CodeSwap</h3>
-                  <p className="text-slate-300 text-xs text-center">Code snippet sharing platform</p>
                 </div>
                 
-                {/* CodeSwap Navigation Bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-10 flex items-center justify-center">
-                  <div className="flex gap-4">
-                    <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                    <div className="w-6 h-2 rounded-full bg-blue-400"></div>
-                    <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                  </div>
-                </div>
+                {/* iPhone Home Indicator */}
+                <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-white rounded-full"></div>
               </div>
+            </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200">CodeSwap</h3>
             </div>
           </div>
         </div>
