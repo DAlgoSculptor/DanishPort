@@ -6,6 +6,7 @@ import project0 from '../assets/project0.webp';
 import Chatty from "../assets/Chatty.webp";
 import project6 from "../assets/project6.webp";
 import project7 from "../assets/project7.webp";
+import GoatNotes from "../assets/Goat-Notes.png"; // Added for Goat Notes project
 import { SiFlutter, SiDart } from "react-icons/si";
 
 
@@ -113,6 +114,15 @@ export const PROJECTS = [
     imgSrc: project7,
     link: "https://lernovate-nepal.vercel.app/",
   },
+  {
+    id: 9,
+    title: "Goat Notes - AI-Powered Note Taking Platform",
+    description:
+      "Goat Notes is an intelligent note-taking platform that leverages AI to enhance productivity and organization. With features like smart categorization, automatic summarization, and contextual suggestions, it transforms how users capture and manage information. Built with Next.js, Supabase, and integrated with AI APIs for an intelligent user experience.",
+    techStack: ["Next.js", "Supabase", "AI APIs", "TailwindCSS", "JavaScript"],
+    imgSrc: GoatNotes,
+    link: "https://goat-notes-sepia.vercel.app/",
+  },
 ];
 
 export const SKILLS = [
@@ -175,8 +185,7 @@ export const SKILLS = [
   {
     name: "JavaScript",
     icon: <RiJavascriptLine className="text-yellow-500" />,
-  },
-  { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
+  }, { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
   { name: "Django", icon: <RiServerLine className="text-green-700" /> },
   {
     name: "React",
