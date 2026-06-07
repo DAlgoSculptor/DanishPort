@@ -4,14 +4,14 @@ import AnimatedPerson from "../assets/Animated person.png"
 
 const Skills = () => {
     return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950 min-h-screen">
+        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-950 via-slate-900 to-black min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-slate-200 to-gray-300 bg-clip-text text-transparent">
                         My Skills
                     </h1>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        Here are the technologies and tools I specialize in as an Android developer. I continuously learn and adapt to new mobile technologies.
+                    <p className="text-xl text-gray-200 dark:text-slate-100 max-w-3xl mx-auto">
+                        A comprehensive toolkit of full-stack development technologies and frameworks. Expertise across frontend, backend, databases, and modern development practices.
                     </p>
                 </div>
                 
@@ -29,8 +29,8 @@ const Skills = () => {
                     
                     <div className="relative max-w-md">
                         <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
-                            <p className="text-lg text-slate-800 dark:text-slate-200 italic">
-                                "With expertise in Android development and cross-platform solutions, I turn complex technical challenges into elegant, user-friendly mobile experiences."
+                            <p className="text-lg text-gray-800 dark:text-slate-200 italic">
+                                "Building scalable, maintainable applications across the entire stack - from responsive frontends to robust backend systems. Bridging the gap between user experience and technical excellence."
                             </p>
                         </div>
                         <div className="absolute -left-4 top-8 w-8 h-8 bg-white dark:bg-slate-800 border-t border-l border-slate-200 dark:border-slate-700 transform rotate-45"></div>
@@ -55,41 +55,41 @@ const Skills = () => {
                 </div>
                 
                 <div className="mt-20 text-center animate-fade-in animation-delay-500">
-                    <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                    <h2 className="text-3xl font-bold mb-10 bg-gradient-to-r from-gray-100 to-slate-200 bg-clip-text text-transparent">
                         What I Offer
                     </h2>
                     <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        <div className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div className="p-8 bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="w-16 h-16 bg-slate-700/50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-slate-300 dark:text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Android Development</h3>
-                            <p className="text-slate-700 dark:text-slate-300">
-                                Building efficient, scalable Android applications using Kotlin, Java, and modern Android development practices. Focusing on performance, user experience, and clean architecture.
+                            <h3 className="text-xl font-bold mb-3 text-gray-100 dark:text-white">Frontend Development</h3>
+                            <p className="text-gray-300 dark:text-slate-300">
+                                Building responsive, interactive user interfaces with React, Next.js, and modern CSS frameworks. Expertise in performance optimization, accessibility, and user experience design.
                             </p>
                         </div>
-                        <div className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div className="p-8 bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="w-16 h-16 bg-slate-700/50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-slate-300 dark:text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Cross-Platform Development</h3>
-                            <p className="text-slate-700 dark:text-slate-300">
-                                Creating cross-platform mobile applications with Flutter and Dart. Building consistent, high-performance apps for both Android and iOS platforms.
+                            <h3 className="text-xl font-bold mb-3 text-gray-100 dark:text-white">Backend Development</h3>
+                            <p className="text-gray-300 dark:text-slate-300">
+                                Developing scalable backend systems with Node.js, Express, and databases like MongoDB and PostgreSQL. Implementing RESTful APIs, authentication, and real-time features with Socket.io.
                             </p>
                         </div>
-                        <div className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                            <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center mb-6 mx-auto">
-                                <svg className="w-8 h-8 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <div className="p-8 bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 dark:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                            <div className="w-16 h-16 bg-slate-700/50 dark:bg-slate-700/50 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+                                <svg className="w-8 h-8 text-slate-300 dark:text-slate-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
                                 </svg>
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white">Mobile Solutions</h3>
-                            <p className="text-slate-700 dark:text-slate-300">
-                                End-to-end development of mobile applications with seamless integration between frontend and backend services. Focus on delivering complete, functional mobile solutions.
+                            <h3 className="text-xl font-bold mb-3 text-gray-100 dark:text-white">Full-Stack Solutions</h3>
+                            <p className="text-gray-300 dark:text-slate-300">
+                                Building complete web applications from database design to user interface. End-to-end development with deployment, monitoring, and continuous improvement practices.
                             </p>
                         </div>
                     </div>

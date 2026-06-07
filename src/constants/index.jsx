@@ -7,7 +7,9 @@ import Chatty from "../assets/Chatty.webp";
 import project6 from "../assets/project6.webp";
 import project7 from "../assets/project7.webp";
 import GoatNotes from "../assets/Goat-Notes.png"; // Added for Goat Notes project
+import CareerHub from "../assets/CareerHub.png"
 import { SiFlutter, SiDart } from "react-icons/si";
+
 
 
 import {
@@ -36,59 +38,89 @@ export const NAVIGATION_LINKS = [
 
 export const PROFILE = {
   name: "Danish Nawaz",
-  role: "Android Developer",
+  role: "Full-Stack Developer",
   subheading:
-    "With 1 years of Android development experience, I build efficient, scalable mobile applications. Not on the job hunt, but always curious about interesting projects.",
+    "Experienced Full-Stack Developer with expertise in building scalable web and mobile applications. Proficient in React, Node.js, and modern development practices. Passionate about creating intuitive user experiences and robust backend systems.",
 };
 
 export const PROJECTS = [
+
+   {
+  id: 1,
+  title: "CareerHub - Career Management & Job Portal Platform",
+  description:
+    "CareerHub is a full-stack career management platform designed to help users explore opportunities, manage professional profiles, and streamline job-related activities. Built with React.js, TypeScript, PostgreSQL, and AWS, it features responsive UI, REST API integration, cross-browser compatibility, and scalable cloud deployment. The platform emphasizes performance, accessibility, and seamless user experience across devices.",
+  techStack: [
+    "React.js",
+    "TypeScript",
+    "JavaScript",
+    "TailwindCSS",
+    "PostgreSQL",
+    "REST APIs",
+    "AWS",
+    "HTML5",
+    "CSS3"
+  ],
+  imgSrc: CareerHub,
+  link: "https://www.careerhubs.info/",
+},
+  
   {
-    id: 1,
+    id: 2,
     title: "NutriScan",
     description:
       "NutriScan is an AI-powered food analysis Android application that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Kotlin, Firebase, and Material Design.",
     techStack: ["Kotlin", "Firebase", "Material Design", "Android"],
     imgSrc: project0,
-    link: "https://nutriscan-food-labels-insights.onrender.com/",
-  },
-  {
-    id: 2,
-    title: "NotesApp – Smart Note-Taking Application",
-    description:
-      "NotesApp is a sleek and intuitive note-taking Android application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
-    techStack: ["Kotlin", "Android", "Room Database", "Material Design"],
-    imgSrc: NotesApp,
-    link: "https://github.com/DAlgoSculptor/NotesApp",
+    link: "https://nutri-scan-ai-phi.vercel.app/",
   },
   {
     id: 3,
-    title: "Meme Generator App",
+    title: "Goat Notes - AI-Powered Note Taking Platform",
     description:
-      "A fun Flutter-based meme app that fetches trending memes from APIs, displays them with a smooth UI, and allows users to share their favorites. Built with performance and responsiveness in mind.",
-    techStack: ["Flutter", "Dart", "REST API"],
-    imgSrc: Meme,
-    link: "https://github.com/DAlgoSculptor/MemeApp",
+      "Goat Notes is an intelligent note-taking platform that leverages AI to enhance productivity and organization. With features like smart categorization, automatic summarization, and contextual suggestions, it transforms how users capture and manage information. Built with Next.js, Supabase, and integrated with AI APIs for an intelligent user experience.",
+    techStack: ["Next.js", "Supabase", "AI APIs", "TailwindCSS", "JavaScript"],
+    imgSrc: GoatNotes,
+    link: "https://goat-notes-sepia.vercel.app/",
   },
+  // {
+  //   id: 2,
+  //   title: "NotesApp – Smart Note-Taking Application",
+  //   description:
+  //     "NotesApp is a sleek and intuitive note-taking Android application designed for quick writing, organizing, and managing tasks or ideas. Featuring real-time updates, customizable note colors, and a modern UI, it provides users with a clutter-free and efficient way to stay productive.",
+  //   techStack: ["Kotlin", "Android", "Room Database", "Material Design"],
+  //   imgSrc: NotesApp,
+  //   link: "https://github.com/DAlgoSculptor/NotesApp",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Meme Generator App",
+  //   description:
+  //     "A fun Flutter-based meme app that fetches trending memes from APIs, displays them with a smooth UI, and allows users to share their favorites. Built with performance and responsiveness in mind.",
+  //   techStack: ["Flutter", "Dart", "REST API"],
+  //   imgSrc: Meme,
+  //   link: "https://github.com/DAlgoSculptor/MemeApp",
+  // },
+  // {
+  //   id: 4,
+  //   title: "CodeSwap",
+  //   description:
+  //     "CodeSwap is a collaborative platform for developers to share, discover, and discuss code snippets. Features syntax highlighting, real-time collaboration, search functionality, and user authentication. Built with a modern full-stack architecture using React for the frontend and Node.js with MongoDB for the backend, supporting WebSockets for real-time updates.",
+  //   techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io", "TailwindCSS"],
+  //   imgSrc: project3,
+  //   link: "https://codeswap-example.com",
+  // },
+  // {
+  //   id: 5,
+  //   title: "Chatty – Real-Time Chat Application",
+  //   description:
+  //     "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
+  //   techStack: ["React", "Node.js", "Express", "MongoDB", "Daisy Ui", "TailwindCSS", "Shadcn"],
+  //   imgSrc: Chatty,
+  //   link: "https://chatty-kappa-ten.vercel.app/login",
+  // },
   {
     id: 4,
-    title: "CodeSwap",
-    description:
-      "CodeSwap is a collaborative platform for developers to share, discover, and discuss code snippets. It features syntax highlighting for multiple languages, real-time collaboration, and a clean, intuitive interface. Built with React, Node.js, and MongoDB for a seamless user experience.",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Socket.io"],
-    imgSrc: project3,
-    link: "https://codeswap-example.com",
-  },
-  {
-    id: 5,
-    title: "Chatty – Real-Time Chat Application",
-    description:
-      "Chatty is a feature-rich and secure chat application built for seamless real-time communication. With an intuitive interface and powerful backend, it enables users to connect instantly, whether for personal or professional conversations",
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Daisy Ui", "TailwindCSS", "Shadcn"],
-    imgSrc: Chatty,
-    link: "https://chatty-kappa-ten.vercel.app/login",
-  },
-  {
-    id: 6,
     title: "Coding Tracker",
     description:
       "Coding Tracker is a personal portfolio tool that automatically syncs solved coding problems from platforms like LeetCode and Codeforces. It features real-time API integration, automated data synchronization, and a clean, searchable interface to browse problems, view solution code, and track progress seamlessly",
@@ -97,7 +129,7 @@ export const PROJECTS = [
     link: "https://code-tracker-rose.vercel.app/",
   },
   {
-    id: 7,
+    id: 5,
     title: "CodeAnalyzer",
     description:
       "CodeAnalyzer is an AI-powered code analysis tool that helps developers detect bugs, measure code quality, and visualize complexity in real time. It features interactive dashboards, advanced code metrics, and a clean, responsive interface designed to improve developer productivity and software reliability. Built with a focus on efficiency, scalability, and seamless user experience",
@@ -105,74 +137,35 @@ export const PROJECTS = [
     imgSrc: project6,
     link: "https://code-analyzer-swart.vercel.app/",
   },
-  {
-    id: 8,
-    title: "LernoVate",
-    description:
-      "LERNOVATE is a modern, responsive learning platform landing page designed to showcase educational services in an engaging and professional manner. It features an elegant UI with smooth navigation, animated components, and a well-structured layout to highlight core offerings, testimonials, and key statistics. The platform emphasizes accessibility, performance optimization, and a mobile-friendly design to ensure a seamless user experience across all devices",
-    techStack: ["Next.js", "React", "Typescript", "TailwindCSS", "Shadcn", "Framer Motion", "Supabase"],
-    imgSrc: project7,
-    link: "https://lernovate-nepal.vercel.app/",
-  },
-  {
-    id: 9,
-    title: "Goat Notes - AI-Powered Note Taking Platform",
-    description:
-      "Goat Notes is an intelligent note-taking platform that leverages AI to enhance productivity and organization. With features like smart categorization, automatic summarization, and contextual suggestions, it transforms how users capture and manage information. Built with Next.js, Supabase, and integrated with AI APIs for an intelligent user experience.",
-    techStack: ["Next.js", "Supabase", "AI APIs", "TailwindCSS", "JavaScript"],
-    imgSrc: GoatNotes,
-    link: "https://goat-notes-sepia.vercel.app/",
-  },
+  // {
+  //   id: 8,
+  //   title: "LernoVate",
+  //   description:
+  //     "LERNOVATE is a modern, responsive learning platform landing page designed to showcase educational services in an engaging and professional manner. It features an elegant UI with smooth navigation, animated components, and a well-structured layout to highlight core offerings, testimonials, and key statistics. The platform emphasizes accessibility, performance optimization, and a mobile-friendly design to ensure a seamless user experience across all devices",
+  //   techStack: ["Next.js", "React", "Typescript", "TailwindCSS", "Shadcn", "Framer Motion", "Supabase"],
+  //   imgSrc: project7,
+  //   link: "https://lernovate-nepal.vercel.app/",
+  // },
+ 
+  
 ];
 
 export const SKILLS = [
   {
-    name: "Kotlin",
-    icon: <RiCodeSSlashLine className="text-purple-500" />,
+    name: "React",
+    icon: <RiReactjsLine className="text-blue-400" />,
   },
   {
-    name: "Java",
-    icon: <RiCodeSSlashLine className="text-red-500" />,
+    name: "Node.js",
+    icon: <RiNodeTree className="text-green-500" />,
   },
   {
-    name: "Android",
-    icon: <RiCodeSSlashLine className="text-green-500" />,
+    name: "JavaScript",
+    icon: <RiJavascriptLine className="text-yellow-500" />,
   },
   {
-    name: "Flutter",
-    icon: <SiFlutter className="text-sky-500" />,
-  },
-  {
-    name: "Dart",
-    icon: <SiDart className="text-cyan-600" />,
-  },
-  {
-    name: "Firebase",
-    icon: <RiDatabaseLine className="text-orange-500" />,
-  },
-  {
-    name: "Material UI",
-    icon: <RiCodeSSlashLine className="text-pink-500" />,
-  },
-  {
-    name: "XML",
+    name: "TypeScript",
     icon: <RiCodeSSlashLine className="text-blue-600" />,
-  },
-  {
-    name: "Jetpack Compose",
-    icon: <RiCodeSSlashLine className="text-teal-400" />,
-  },
-  {
-    name: "Room Database",
-    icon: <RiDatabaseLine className="text-green-600" />,
-  },
-  {
-    name: "REST API",
-    icon: <RiGitBranchLine className="text-blue-500" />,
-  },
-  {
-    name: "Git",
-    icon: <RiGitBranchLine className="text-orange-400" />,
   },
   {
     name: "HTML5",
@@ -183,48 +176,87 @@ export const SKILLS = [
     icon: <RiCss3Line className="text-blue-500" />,
   },
   {
-    name: "JavaScript",
-    icon: <RiJavascriptLine className="text-yellow-500" />,
-  }, { name: "Python", icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> },
-  { name: "Django", icon: <RiServerLine className="text-green-700" /> },
-  {
-    name: "React",
-    icon: <RiReactjsLine className="text-blue-400" />,
-  },
-  {
-    name: "Node.js",
-    icon: <RiNodeTree className="text-green-500" />,
-  },
-  {
     name: "MongoDB",
     icon: <RiDatabaseLine className="text-green-600" />,
+  },
+  {
+    name: "Express.js",
+    icon: <RiServerLine className="text-gray-700" />,
+  },
+  {
+    name: "Next.js",
+    icon: <RiCodeSSlashLine className="text-black dark:text-white" />,
+  },
+  {
+    name: "REST API",
+    icon: <RiGitBranchLine className="text-blue-500" />,
+  },
+  {
+    name: "GraphQL",
+    icon: <RiGitBranchLine className="text-pink-400" />,
   },
   {
     name: "Tailwind CSS",
     icon: <RiCodeSSlashLine className="text-teal-400" />,
   },
   {
-    name: "GraphQL",
-    icon: <RiGitBranchLine className="text-pink-400" />,
+    name: "PostgreSQL",
+    icon: <RiDatabaseLine className="text-blue-700" />,
+  },
+  {
+    name: "Supabase",
+    icon: <RiDatabaseLine className="text-green-500" />,
+  },
+  {
+    name: "Firebase",
+    icon: <RiDatabaseLine className="text-orange-500" />,
+  },
+  {
+    name: "Git",
+    icon: <RiGitBranchLine className="text-orange-400" />,
+  },
+  {
+    name: "Framer Motion",
+    icon: <RiCodeSSlashLine className="text-purple-500" />,
+  },
+  {
+    name: "Socket.io",
+    icon: <RiServerLine className="text-blue-600" />,
+  },
+  {
+    name: "Shadcn",
+    icon: <RiCodeSSlashLine className="text-slate-600" />,
+  },
+  {
+    name: "Daisy UI",
+    icon: <RiCodeSSlashLine className="text-yellow-600" />,
+  },
+  { 
+    name: "Python", 
+    icon: <RiCodeSSlashLine className="text-blue-500 dark:text-yellow-400" /> 
+  },
+  { 
+    name: "Django", 
+    icon: <RiServerLine className="text-green-700" /> 
   },
 ];
 
 export const EXPERIENCES = [
   {
     yearRange: "2023 - 2024",
-    role: "Junior Android Developer",
+    role: "Junior Full-Stack Developer",
     company: "CodSoft",
     description:
-      "Worked on developing Android applications and internal tools. Assisted in debugging and optimizing app performance. Gained hands-on experience with Kotlin, Java, and Android SDK. Developed features for NutriScan and NotesApp applications.",
-    techStack: ["Kotlin", "Java", "Android", "Firebase", "REST API"],
+      "Developed and maintained full-stack applications using React, Node.js, and MongoDB. Implemented RESTful APIs, optimized database queries, and collaborated with cross-functional teams. Gained hands-on experience in frontend development, backend architecture, and API design. Worked on multiple projects including collaborative platforms and real-time applications.",
+    techStack: ["React", "Node.js", "MongoDB", "Express", "REST API", "Firebase"],
   },
   {
-    yearRange: "2025",
-    role: "Flutter Developer Intern",
+    yearRange: "2025 - Present",
+    role: "Full-Stack Developer",
     company: "Petuk Ji Private Limited",
     description:
-      "Developed TradeTook, a mobile application using Flutter framework. Integrated Smart API and implemented real-time data synchronization with Firebase. Gained practical experience in cross-platform mobile development and RESTful API integration.",
-    techStack: ["Flutter", "Dart", "Firebase Realtime Database", "Smart API Integration"],
+      "Developing full-stack applications with modern technologies including React, Next.js, and Node.js. Architecting scalable backend systems, implementing real-time features, and optimizing frontend performance. Integrated multiple APIs and databases, implementing authentication systems, and ensuring code quality through testing and deployment pipelines.",
+    techStack: ["Next.js", "React", "Node.js", "TypeScript", "Supabase", "TailwindCSS"],
   },
 ];
 

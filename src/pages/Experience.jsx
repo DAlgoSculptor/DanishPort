@@ -3,14 +3,14 @@ import { Link } from "react-router-dom"
 
 const Experience = () => {
     return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950 min-h-screen">
+        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-950 via-slate-900 to-black min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-slate-200 to-gray-300 bg-clip-text text-transparent">
                         Work Experience
                     </h1>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        My journey as an Android developer and the experiences that have shaped my mobile development skills and expertise.
+                    <p className="text-xl text-gray-200 dark:text-slate-100 max-w-3xl mx-auto">
+                        Full-stack development journey showcasing expertise in building scalable web applications, backend systems, and modern development practices.
                     </p>
                 </div>
                 

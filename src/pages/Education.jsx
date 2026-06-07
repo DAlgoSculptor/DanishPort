@@ -4,47 +4,47 @@ import { RiExternalLinkLine } from "@remixicon/react"
 
 const Education = () => {
     return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-green-50 to-emerald-100 dark:from-slate-900 dark:via-slate-800 dark:to-emerald-950 min-h-screen">
+        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-950 via-slate-900 to-black min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16 animate-fade-in">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-slate-200 to-gray-300 bg-clip-text text-transparent">
                         Education
                     </h1>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        My academic journey and the knowledge I've gained along the way.
+                    <p className="text-xl text-gray-200 dark:text-slate-100 max-w-3xl mx-auto">
+                        My academic journey in Computer Science and Engineering, focusing on software development, AI, and modern technologies.
                     </p>
                 </div>
                 
                 <div className="max-w-4xl mx-auto">
                     <div className="space-y-8">
                         {EDUCATION.map((edu, index) => (
-                            <div 
+                                <div 
                                 key={edu.id || index} 
-                                className="p-8 bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
+                                className="p-8 bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl border border-gray-700/50 dark:border-slate-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 animate-fade-in"
                                 style={{ animationDelay: `${index * 0.2}s` }}
                             >
                                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 md:mb-0">
+                                    <h3 className="text-2xl font-bold text-gray-100 dark:text-white mb-4 md:mb-0">
                                         {edu.degree}
                                     </h3>
-                                    <span className="inline-block px-4 py-2 text-sm font-semibold text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-300 rounded-full">
+                                    <span className="inline-block px-4 py-2 text-sm font-semibold text-gray-200 bg-slate-700/50 dark:bg-slate-700/50 dark:text-slate-100 rounded-full">
                                         {edu.duration}
                                     </span>
                                 </div>
                                 
-                                <h4 className="text-xl font-semibold text-slate-700 dark:text-slate-300 mb-6">
+                                <h4 className="text-xl font-semibold text-gray-300 dark:text-slate-200 mb-6">
                                     <a 
                                         href={edu.link} 
                                         target="_blank" 
                                         rel="noopener noreferrer"
-                                        className="hover:text-green-600 dark:hover:text-green-400 transition-colors duration-200 flex items-center"
+                                        className="hover:text-slate-100 dark:hover:text-slate-300 transition-colors duration-200 flex items-center"
                                     >
                                         {edu.institution}
                                         <RiExternalLinkLine className="ml-2 w-4 h-4" />
                                     </a>
                                 </h4>
                                 
-                                <p className="text-slate-600 dark:text-slate-400 mb-8">
+                                <p className="text-gray-400 dark:text-slate-300 mb-8">
                                     {edu.description}
                                 </p>
                                 

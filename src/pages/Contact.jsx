@@ -39,14 +39,14 @@ const Contact = () => {
     };
     
     return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-indigo-950 min-h-screen">
+        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-950 via-slate-900 to-black min-h-screen">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-slate-200 to-gray-300 bg-clip-text text-transparent">
                         Get In Touch
                     </h1>
-                    <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto">
-                        Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+                    <p className="text-xl text-gray-200 dark:text-slate-100 max-w-3xl mx-auto">
+                        Have a project in mind or want to discuss full-stack development opportunities? Feel free to reach out!
                     </p>
                 </div>
                 
@@ -64,14 +64,14 @@ const Contact = () => {
                     
                     {/* Contact Form and Information */}
                     <div>
-                        <div className="bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white/30 dark:border-slate-700/50">
-                            <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
+                        <div className="bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-gray-700/50 dark:border-slate-700/50">
+                            <h2 className="text-2xl font-bold mb-6 text-gray-100 dark:text-white">
                                 Send Me a Message
                             </h2>
                             
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 dark:text-slate-300 mb-1">
                                         Name
                                     </label>
                                     <input
@@ -152,7 +152,7 @@ const Contact = () => {
                                                 href="mailto:danishnawaz345678@gmail.com" 
                                                 className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                                             >
-                                                danishnawaz345678@gmail.com
+                                                danish0edu@gmail.com
                                             </a>
                                         </div>
                                     </div>
