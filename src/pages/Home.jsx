@@ -169,7 +169,7 @@ const Home = () => {
             <RiGithubLine className="w-6 h-6" />
           </a>
           <a 
-            href="https://www.linkedin.com/in/danish-nawaz-475654254/" 
+            href="https://www.linkedin.com/in/danish-techy/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 bg-gray-800/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-gray-700/50 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-gray-300 dark:text-slate-300 hover:text-slate-100 dark:hover:text-white transform hover:-translate-y-1"
