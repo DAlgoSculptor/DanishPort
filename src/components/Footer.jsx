@@ -26,7 +26,7 @@ const Footer = () => {
               Danish Nawaz
             </h3>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-              Android Developer
+              Full-Stack Developer
             </p>
           </div>
           
@@ -42,7 +42,7 @@ const Footer = () => {
               <RiGithubLine className="w-5 h-5" />
             </a>
             <a 
-              href="https://www.linkedin.com/in/danish-nawaz-475654254/" 
+              href="https://www.linkedin.com/in/danish-techy/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
@@ -60,7 +60,7 @@ const Footer = () => {
               <RiTwitterXLine className="w-5 h-5" />
             </a>
             <a 
-              href="mailto:danishnawaz345678@gmail.com" 
+              href="mailto:danish0edu@gmail.com" 
               className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
               aria-label="Email"
             >
