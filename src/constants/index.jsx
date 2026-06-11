@@ -8,6 +8,7 @@ import project6 from "../assets/project6.webp";
 import project7 from "../assets/project7.webp";
 import GoatNotes from "../assets/Goat-Notes.png"; // Added for Goat Notes project
 import CareerHub from "../assets/CareerHub.png"
+import SmartQR from "../assets/SmartQR.png";
 import { SiFlutter, SiDart } from "react-icons/si";
 
 
@@ -45,28 +46,45 @@ export const PROFILE = {
 
 export const PROJECTS = [
 
-   {
-  id: 1,
-  title: "CareerHub - Career Management & Job Portal Platform",
-  description:
-    "CareerHub is a full-stack career management platform designed to help users explore opportunities, manage professional profiles, and streamline job-related activities. Built with React.js, TypeScript, PostgreSQL, and AWS, it features responsive UI, REST API integration, cross-browser compatibility, and scalable cloud deployment. The platform emphasizes performance, accessibility, and seamless user experience across devices.",
-  techStack: [
-    "React.js",
-    "TypeScript",
-    "JavaScript",
-    "TailwindCSS",
-    "PostgreSQL",
-    "REST APIs",
-    "AWS",
-    "HTML5",
-    "CSS3"
-  ],
-  imgSrc: CareerHub,
-  link: "https://www.careerhubs.info/",
-},
-  
+  {
+    id: 1,
+    title: "SmartQR - Premium SaaS Dynamic QR Code Platform",
+    description:
+      "SmartQR is a high-performance SaaS dynamic QR code generation, customization, and redirection platform. It features an editorial dark-themed UI with warm copper accents, interactive design controls for dot/shape layouts and finder eyes, custom dynamic templates (PDF viewer, social bio link-in-bio, digital menu), usage limit guardrails with glassmorphic auth prompts, client-side retargeting pixel redirects, and a Bento-style real-time analytics dashboard with Recharts visualization.",
+    techStack: [
+      "Next.js",
+      "Supabase",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Recharts",
+      "ImageKit CDN",
+      "Middleware API"
+    ],
+    imgSrc: SmartQR,
+    link: "https://smart-qr-a7zx.vercel.app/",
+  },
   {
     id: 2,
+    title: "CareerHub - Career Management & Job Portal Platform",
+    description:
+      "CareerHub is a full-stack career management platform designed to help users explore opportunities, manage professional profiles, and streamline job-related activities. Built with React.js, TypeScript, PostgreSQL, and AWS, it features responsive UI, REST API integration, cross-browser compatibility, and scalable cloud deployment. The platform emphasizes performance, accessibility, and seamless user experience across devices.",
+    techStack: [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "TailwindCSS",
+      "PostgreSQL",
+      "REST APIs",
+      "AWS",
+      "HTML5",
+      "CSS3"
+    ],
+    imgSrc: CareerHub,
+    link: "https://www.careerhubs.info/",
+  },
+  {
+    id: 3,
     title: "NutriScan",
     description:
       "NutriScan is an AI-powered food analysis Android application that allows users to scan packaged food items and instantly detect harmful ingredients. It features real-time image processing, user authentication, and a clean, responsive interface for a seamless experience. Built using Kotlin, Firebase, and Material Design.",
@@ -75,7 +93,7 @@ export const PROJECTS = [
     link: "https://nutri-scan-ai-phi.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "Goat Notes - AI-Powered Note Taking Platform",
     description:
       "Goat Notes is an intelligent note-taking platform that leverages AI to enhance productivity and organization. With features like smart categorization, automatic summarization, and contextual suggestions, it transforms how users capture and manage information. Built with Next.js, Supabase, and integrated with AI APIs for an intelligent user experience.",
@@ -120,7 +138,7 @@ export const PROJECTS = [
   //   link: "https://chatty-kappa-ten.vercel.app/login",
   // },
   {
-    id: 4,
+    id: 5,
     title: "Coding Tracker",
     description:
       "Coding Tracker is a personal portfolio tool that automatically syncs solved coding problems from platforms like LeetCode and Codeforces. It features real-time API integration, automated data synchronization, and a clean, searchable interface to browse problems, view solution code, and track progress seamlessly",
@@ -129,7 +147,7 @@ export const PROJECTS = [
     link: "https://code-tracker-rose.vercel.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "CodeAnalyzer",
     description:
       "CodeAnalyzer is an AI-powered code analysis tool that helps developers detect bugs, measure code quality, and visualize complexity in real time. It features interactive dashboards, advanced code metrics, and a clean, responsive interface designed to improve developer productivity and software reliability. Built with a focus on efficiency, scalability, and seamless user experience",

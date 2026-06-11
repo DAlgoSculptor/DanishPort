@@ -1,235 +1,252 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { RiMailLine, RiPhoneLine, RiMapPinLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine } from "@remixicon/react";
-import animatedPerson from "../assets/Animated person.png";
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { RiMailLine, RiPhoneLine, RiMapPinLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiArrowLeftLine, RiTerminalLine } from "@remixicon/react"
 
 const Contact = () => {
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: ""
-    });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [systemLogs, setSystemLogs] = useState([
+    "[sys] mail server listening on port 25...",
+    "[sys] smtp relay secure channel active.",
+    "[net] ready to accept payload data."
+  ]);
+  
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
     
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null);
+    // Add pending log line
+    setSystemLogs(prev => [
+      ...prev,
+      `[net] buffering payload package from ${formData.email}...`,
+      `[smtp] dispatching payload handshake request...`
+    ]);
     
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({
-            ...prev,
-            [name]: value
-        }));
-    };
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus("success");
+      setSystemLogs(prev => [
+        ...prev,
+        `[smtp] dispatch successful. message_id: md_${Math.random().toString(36).substring(2, 8)}`,
+        `[sys] connection closed cleanly (202).`
+      ]);
+      setFormData({ name: "", email: "", message: "" });
+    }, 1200);
+  };
+  
+  return (
+    <section className="pt-28 pb-20 bg-zinc-950 text-zinc-100 min-h-screen relative grid-pattern-dev font-sans">
+      
+      <div className="container mx-auto px-6 max-w-5xl relative z-10">
         
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus("success");
-            setFormData({ name: "", email: "", message: "" });
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-5xl font-display font-black mb-4 text-white">
+            Connection Hub
+          </h1>
+          <p className="text-sm md:text-base text-zinc-400 max-w-xl mx-auto font-light leading-relaxed">
+            Initialize an SMTP transmission or link via standard social hooks.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start max-w-4xl mx-auto">
+          
+          {/* Left Side: Mock System Logs & Contact Parameters */}
+          <div className="lg:col-span-5 space-y-6">
             
-            // Reset status after 5 seconds
-            setTimeout(() => {
-                setSubmitStatus(null);
-            }, 5000);
-        }, 1500);
-    };
-    
-    return (
-        <section className="pt-24 pb-16 bg-gradient-to-br from-gray-950 via-slate-900 to-black min-h-screen">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-gray-100 via-slate-200 to-gray-300 bg-clip-text text-transparent">
-                        Get In Touch
-                    </h1>
-                    <p className="text-xl text-gray-200 dark:text-slate-100 max-w-3xl mx-auto">
-                        Have a project in mind or want to discuss full-stack development opportunities? Feel free to reach out!
-                    </p>
-                </div>
-                
-                <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Animated Person Image without blinking eyes */}
-                    <div className="flex justify-center">
-                        <div className="w-80 h-96 md:w-96 md:h-[450px] flex items-center justify-center">
-                            <img 
-                                src={animatedPerson} 
-                                alt="Animated Person" 
-                                className="w-full h-full object-contain"
-                            />
-                        </div>
-                    </div>
-                    
-                    {/* Contact Form and Information */}
-                    <div>
-                        <div className="bg-gray-800/70 dark:bg-slate-800/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-gray-700/50 dark:border-slate-700/50">
-                            <h2 className="text-2xl font-bold mb-6 text-gray-100 dark:text-white">
-                                Send Me a Message
-                            </h2>
-                            
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 dark:text-slate-300 mb-1">
-                                        Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
-                                        placeholder="Your name"
-                                    />
-                                </div>
-                                
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                                        Email
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
-                                        placeholder="your.email@example.com"
-                                    />
-                                </div>
-                                
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
-                                        Message
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                        rows={5}
-                                        className="w-full px-4 py-3 border border-slate-200 dark:border-slate-700 rounded-xl bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 shadow-sm"
-                                        placeholder="Your message here..."
-                                    ></textarea>
-                                </div>
-                                
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className={`w-full py-3 px-4 rounded-xl font-medium text-white transition-all duration-300 shadow-lg ${
-                                        isSubmitting 
-                                            ? 'bg-blue-400 cursor-not-allowed' 
-                                            : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 hover:shadow-xl'
-                                    }`}
-                                >
-                                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                                </button>
-                                
-                                {submitStatus === "success" && (
-                                    <div className="p-4 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-xl">
-                                        Thank you for your message! I'll get back to you soon.
-                                    </div>
-                                )}
-                            </form>
-                            
-                            {/* Contact Information */}
-                            <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-700">
-                                <h3 className="text-xl font-semibold mb-4 text-slate-900 dark:text-white">Contact Information</h3>
-                                
-                                <div className="space-y-4">
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
-                                            <RiMailLine className="w-5 h-5" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Email</h4>
-                                            <a 
-                                                href="mailto:danishnawaz345678@gmail.com" 
-                                                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                                            >
-                                                danish0edu@gmail.com
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
-                                            <RiPhoneLine className="w-5 h-5" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Phone</h4>
-                                            <a 
-                                                href="tel:+916203919978" 
-                                                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                                            >
-                                                +91 6203919978
-                                            </a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div className="flex items-center">
-                                        <div className="flex-shrink-0 p-3 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 rounded-lg">
-                                            <RiMapPinLine className="w-5 h-5" />
-                                        </div>
-                                        <div className="ml-4">
-                                            <h4 className="text-sm font-medium text-slate-500 dark:text-slate-400">Location</h4>
-                                            <p className="text-slate-700 dark:text-slate-300">
-                                                Ambala, Haryana, India
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div className="mt-8">
-                                    <h4 className="text-lg font-semibold mb-4 text-slate-900 dark:text-white">Connect With Me</h4>
-                                    <div className="flex space-x-4">
-                                        <a 
-                                            href="https://github.com/DAlgoSculptor" 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
-                                        >
-                                            <RiGithubLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                                        </a>
-                                        <a 
-                                            href="https://www.linkedin.com/in/danish-nawaz-86154028a/" 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
-                                        >
-                                            <RiLinkedinLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                                        </a>
-                                        <a 
-                                            href="https://x.com/DNawaz65591" 
-                                            target="_blank" 
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-white dark:bg-slate-700 rounded-full shadow-md hover:shadow-lg transition-all duration-300 border border-slate-200 dark:border-slate-600"
-                                        >
-                                            <RiTwitterXLine className="w-5 h-5 text-slate-700 dark:text-slate-300" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="mt-16 text-center">
-                    <Link 
-                        to="/" 
-                        className="inline-block px-6 py-3 bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-all duration-300 shadow-lg"
-                    >
-                        ← Back to Home
-                    </Link>
-                </div>
+            {/* Connection Status Log Terminal */}
+            <div className="border border-zinc-800 bg-zinc-900/40 rounded-xl overflow-hidden shadow-sm font-mono-dev">
+              <div className="flex items-center justify-between px-3 py-1.5 border-b border-zinc-800 bg-zinc-950/80">
+                <span className="text-zinc-500 text-[10px] uppercase font-mono tracking-wider">mail_transaction.log</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              </div>
+              <div className="p-4 font-mono text-[10px] leading-relaxed text-zinc-450 min-h-[140px] max-h-[200px] overflow-y-auto space-y-1 bg-zinc-950/40">
+                {systemLogs.map((log, idx) => (
+                  <div key={idx} className={log.includes("successful") ? "text-emerald-400" : ""}>
+                    {log}
+                  </div>
+                ))}
+              </div>
             </div>
-        </section>
-    )
+
+            {/* Direct contact nodes */}
+            <div className="space-y-3 font-mono">
+              
+              <div className="p-4 bg-zinc-900/20 border border-zinc-850 rounded-xl flex items-center gap-3.5">
+                <RiMailLine className="w-4 h-4 text-zinc-500" />
+                <div>
+                  <div className="text-[10px] text-zinc-650 uppercase tracking-wider">email</div>
+                  <a href="mailto:danish0edu@gmail.com" className="text-xs text-zinc-355 hover:text-indigo-400">
+                    danish0edu@gmail.com
+                  </a>
+                </div>
+              </div>
+              
+              <div className="p-4 bg-zinc-900/20 border border-zinc-850 rounded-xl flex items-center gap-3.5">
+                <RiPhoneLine className="w-4 h-4 text-zinc-500" />
+                <div>
+                  <div className="text-[10px] text-zinc-650 uppercase tracking-wider">phone</div>
+                  <a href="tel:+916203919978" className="text-xs text-zinc-355 hover:text-indigo-400">
+                    +91 6203919978
+                  </a>
+                </div>
+              </div>
+              
+              <div className="p-4 bg-zinc-900/20 border border-zinc-850 rounded-xl flex items-center gap-3.5">
+                <RiMapPinLine className="w-4 h-4 text-zinc-500" />
+                <div>
+                  <div className="text-[10px] text-zinc-650 uppercase tracking-wider">location</div>
+                  <div className="text-xs text-zinc-355">
+                    Ambala, Haryana, India
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          
+          {/* Right Side: Message Form */}
+          <div className="lg:col-span-7">
+            <div className="p-6 md:p-8 bg-zinc-900/40 border border-zinc-800/80 rounded-2xl">
+              <h2 className="text-lg font-mono font-bold text-white mb-6 uppercase tracking-wider">
+                $ send_message.sh
+              </h2>
+              
+              <form onSubmit={handleSubmit} className="space-y-4 font-mono">
+                
+                <div className="space-y-1">
+                  <label htmlFor="name" className="block text-[10px] text-zinc-500 uppercase tracking-wider">
+                    name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 py-2 bg-zinc-950 border border-zinc-850 focus:border-zinc-700 text-zinc-200 placeholder-zinc-700 rounded-lg text-xs outline-none transition-colors"
+                    placeholder="guest_user"
+                  />
+                </div>
+                
+                <div className="space-y-1">
+                  <label htmlFor="email" className="block text-[10px] text-zinc-500 uppercase tracking-wider">
+                    email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 py-2 bg-zinc-950 border border-zinc-850 focus:border-zinc-700 text-zinc-200 placeholder-zinc-700 rounded-lg text-xs outline-none transition-colors"
+                    placeholder="user@domain.com"
+                  />
+                </div>
+                
+                <div className="space-y-1">
+                  <label htmlFor="message" className="block text-[10px] text-zinc-500 uppercase tracking-wider">
+                    message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={4}
+                    className="w-full px-3 py-2 bg-zinc-950 border border-zinc-850 focus:border-zinc-700 text-zinc-200 placeholder-zinc-700 rounded-lg text-xs outline-none transition-colors resize-none"
+                    placeholder="type payload here..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`w-full py-2 rounded-lg text-xs font-semibold font-mono tracking-wider transition-all duration-150 ${
+                    isSubmitting 
+                      ? "bg-zinc-900 border border-zinc-850 text-zinc-650 cursor-not-allowed" 
+                      : "bg-zinc-100 hover:bg-zinc-250 text-zinc-950 shadow-sm active:scale-98"
+                  }`}
+                >
+                  {isSubmitting ? "transmitting..." : "execute_submit()"}
+                </button>
+                
+                {submitStatus === "success" && (
+                  <div className="p-3 bg-emerald-500/10 border border-emerald-500/20 text-emerald-450 text-[11px] rounded-lg">
+                    [success] Message buffered for dispatch. Check terminal logs.
+                  </div>
+                )}
+              </form>
+
+              {/* Social Channels Row */}
+              <div className="mt-8 pt-6 border-t border-zinc-900 flex items-center justify-between font-mono">
+                <span className="text-[10px] text-zinc-500 uppercase tracking-wider">socials</span>
+                <div className="flex gap-2">
+                  <a 
+                    href="https://github.com/DAlgoSculptor" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 bg-zinc-950 border border-zinc-850 hover:border-zinc-800 text-zinc-500 hover:text-zinc-200 rounded-lg transition-colors"
+                    aria-label="GitHub Profile"
+                  >
+                    <RiGithubLine className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/danish-techy/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 bg-zinc-950 border border-zinc-850 hover:border-zinc-800 text-zinc-500 hover:text-zinc-200 rounded-lg transition-colors"
+                    aria-label="LinkedIn Profile"
+                  >
+                    <RiLinkedinLine className="w-3.5 h-3.5" />
+                  </a>
+                  <a 
+                    href="https://twitter.com/DanishNawaz0009" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 bg-zinc-950 border border-zinc-850 hover:border-zinc-800 text-zinc-500 hover:text-zinc-200 rounded-lg transition-colors"
+                    aria-label="Twitter Profile"
+                  >
+                    <RiTwitterXLine className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          
+        </div>
+        
+        {/* Back Link */}
+        <div className="mt-16 text-center">
+          <Link 
+            to="/" 
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 text-zinc-400 font-mono text-xs transition-all duration-150"
+          >
+            <RiArrowLeftLine className="w-3.5 h-3.5" />
+            cd ..
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
 }
 
 export default Contact

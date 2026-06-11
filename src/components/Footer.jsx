@@ -1,122 +1,88 @@
 import { RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiMailLine } from "@remixicon/react";
-import animatedPerson from "../assets/Animated person.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="relative mt-auto pt-12 pb-8 bg-gradient-to-t from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 border-t border-white/30 dark:border-slate-700/50">
+    <footer className="relative mt-auto py-8 bg-zinc-50 dark:bg-zinc-950 border-t border-zinc-200 dark:border-zinc-900">
       <div className="max-w-4xl mx-auto px-6">
-        {/* Top border decoration */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
-        
-        <div className="flex flex-col items-center gap-6">
-          {/* Animated Person Image in center */}
-          <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
-            <img 
-              src={animatedPerson} 
-              alt="Animated Person" 
-              className="w-full h-full object-contain"
-            />
-          </div>
-          
-          {/* Logo/Name */}
-          <div className="flex flex-col items-center">
-            <h3 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-emerald-600">
-              Danish Nawaz
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
+          {/* Brand Info */}
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="font-mono text-sm tracking-wider font-semibold text-zinc-900 dark:text-zinc-50">
+              danish_nawaz
             </h3>
-            <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
-              Full-Stack Developer
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 font-mono">
+              Full-Stack System Engineer
             </p>
           </div>
           
-          {/* Social Links */}
-          <div className="flex gap-4">
+          {/* Plain Social Links */}
+          <div className="flex gap-4 text-zinc-500 dark:text-zinc-400">
             <a 
               href="https://github.com/DAlgoSculptor" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
-              aria-label="GitHub Profile"
+              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150"
+              aria-label="GitHub"
             >
-              <RiGithubLine className="w-5 h-5" />
+              <RiGithubLine className="w-4 h-4" />
             </a>
             <a 
               href="https://www.linkedin.com/in/danish-techy/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
-              aria-label="LinkedIn Profile"
+              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150"
+              aria-label="LinkedIn"
             >
-              <RiLinkedinLine className="w-5 h-5" />
+              <RiLinkedinLine className="w-4 h-4" />
             </a>
             <a 
               href="https://twitter.com/DanishNawaz0009" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
-              aria-label="Twitter Profile"
+              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150"
+              aria-label="Twitter"
             >
-              <RiTwitterXLine className="w-5 h-5" />
+              <RiTwitterXLine className="w-4 h-4" />
             </a>
             <a 
               href="mailto:danish0edu@gmail.com" 
-              className="p-3 bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg rounded-xl border border-white/30 dark:border-slate-700/50 shadow-neumorphism-card hover:shadow-neumorphism-card-hover transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-green-600 dark:hover:text-green-400 transform hover:-translate-y-1"
+              className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-150"
               aria-label="Email"
             >
-              <RiMailLine className="w-5 h-5" />
+              <RiMailLine className="w-4 h-4" />
             </a>
           </div>
         </div>
         
-        {/* Divider */}
-        <div className="my-8 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent"></div>
+        {/* Divider line */}
+        <div className="my-6 h-px bg-zinc-200 dark:bg-zinc-900"></div>
         
-        {/* Copyright and Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-600 dark:text-slate-400 text-sm">
-            © {currentYear} Danish Nawaz. All rights reserved.
+        {/* Legal links */}
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left text-xs font-mono text-zinc-500">
+          <p>
+            © {currentYear} Danish Nawaz. Compiled successfully.
           </p>
           
-          <div className="flex gap-6">
-            <a 
-              href="/privacy-policy" 
-              className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 text-sm transition-colors duration-300"
+          <div className="flex gap-4">
+            <Link 
+              to="/privacy-policy" 
+              className="hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
             >
-              Privacy Policy
-            </a>
-            <a 
-              href="/terms-of-service" 
-              className="text-slate-600 dark:text-slate-400 hover:text-green-600 dark:hover:text-green-400 text-sm transition-colors duration-300"
+              privacy_policy
+            </Link>
+            <span className="text-zinc-300 dark:text-zinc-800">/</span>
+            <Link 
+              to="/terms-of-service" 
+              className="hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
             >
-              Terms of Service
-            </a>
+              terms_of_service
+            </Link>
           </div>
         </div>
       </div>
-      
-      {/* Neumorphism styles */}
-      <style>{`
-        .shadow-neumorphism-card {
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), 
-                      -6px -6px 12px rgba(255, 255, 255, 0.7);
-        }
-        
-        .dark .shadow-neumorphism-card {
-          box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3), 
-                      -6px -6px 12px rgba(255, 255, 255, 0.05);
-        }
-        
-        .shadow-neumorphism-card-hover {
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), 
-                      -4px -4px 8px rgba(255, 255, 255, 0.7);
-        }
-        
-        .dark .shadow-neumorphism-card-hover {
-          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3), 
-                      -4px -4px 8px rgba(255, 255, 255, 0.05);
-        }
-      `}</style>
     </footer>
   );
 };
