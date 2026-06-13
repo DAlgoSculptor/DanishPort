@@ -1,6 +1,6 @@
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine, RiGithubLine, RiLinkedinLine, RiTwitterXLine, RiDownloadLine, RiTerminalLine } from "@remixicon/react";
-import NewDanishImage from "../assets/NewDanish.jpg";
+import NewDanishImage from "../assets/nawaz_Danish_image.jpeg";
 import NutriScanVideo from "../assets/Nutri.mp4";
 import CodeSwapVideo from "../assets/CodeSwap.mp4";
 import SmartQRImage from "../assets/SmartQR.png";
